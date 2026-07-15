@@ -89,7 +89,7 @@ export default function HomePage() {
           <div className="hero-cta">
             <Link className="btn btn-primary" href="/features">Explore the features</Link>
             <Link className="btn btn-ghost" href="/how-to/getting-started">Read the guides</Link>
-            <Link className="btn btn-ghost" href="/download">Download</Link>
+            <Link className="btn btn-ghost" href="/download">Download Maestro Studio</Link>
           </div>
           <p className="hero-note">
             <span className="st">●</span> Built in Rust · single core across all three platforms · your keys stay in your OS keychain
