@@ -20,6 +20,7 @@ const DOWNLOADS: {
   kind: string;
   note: string;
   alt?: { file: string; kind: string };
+  comingSoon?: boolean;
 }[] = [
   {
     platform: "Windows",
@@ -27,14 +28,16 @@ const DOWNLOADS: {
     file: `Maestro-IDE_${VERSION}_x64-setup.exe`,
     kind: "Installer (.exe)",
     alt: { file: `Maestro-IDE_${VERSION}_x64.msi`, kind: ".msi" },
-    note: "Unsigned preview — SmartScreen will ask you to confirm (More info → Run anyway).",
+    note: "The Windows build is being produced now — it will appear here and in the release as soon as it's ready.",
+    comingSoon: true,
   },
   {
     platform: "macOS",
     arch: "Apple Silicon · macOS 12+",
     file: `Maestro-IDE_${VERSION}_aarch64.dmg`,
     kind: "Disk image (.dmg)",
-    note: "Unsigned preview — on first open: right-click the app → Open, or allow it under System Settings → Privacy & Security.",
+    note: "The Apple Silicon build is being produced now — it will appear here as soon as it's ready. Intel builds run on Apple Silicon via Rosetta in the meantime.",
+    comingSoon: true,
   },
   {
     platform: "macOS",
@@ -112,13 +115,21 @@ export default function DownloadPage() {
                 <span className="k">{d.platform} · {d.arch}</span>
                 <h3 style={{ marginBottom: 10 }}>{d.platform === "macOS" ? `macOS — ${d.arch.split(" ·")[0]}` : d.platform}</h3>
                 <div className="hero-cta" style={{ marginTop: "auto", gap: 10 }}>
-                  <a className="btn btn-primary" href={`${BASE}/${d.file}`} style={{ padding: "10px 16px", fontSize: "0.92rem" }}>
-                    Download {d.kind}
-                  </a>
-                  {d.alt && (
-                    <a className="btn btn-ghost" href={`${BASE}/${d.alt.file}`} style={{ padding: "10px 16px", fontSize: "0.92rem" }}>
-                      {d.alt.kind}
-                    </a>
+                  {d.comingSoon ? (
+                    <span className="btn btn-ghost btn-soon" aria-disabled="true">
+                      Coming soon
+                    </span>
+                  ) : (
+                    <>
+                      <a className="btn btn-primary" href={`${BASE}/${d.file}`} style={{ padding: "10px 16px", fontSize: "0.92rem" }}>
+                        Download {d.kind}
+                      </a>
+                      {d.alt && (
+                        <a className="btn btn-ghost" href={`${BASE}/${d.alt.file}`} style={{ padding: "10px 16px", fontSize: "0.92rem" }}>
+                          {d.alt.kind}
+                        </a>
+                      )}
+                    </>
                   )}
                 </div>
                 <p style={{ color: "var(--faint)", fontSize: "0.82rem", marginTop: 12 }}>{d.note}</p>
