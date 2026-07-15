@@ -23,12 +23,14 @@ export default function Footer() {
             <span className="h">Product</span>
             <Link href="/features">Features</Link>
             <Link href="/#roadmap">Roadmap</Link>
+            <Link href="/compare/hermes-agent">vs Hermes Agent</Link>
             <Link href="/faq">FAQ</Link>
           </div>
           <div className="col">
             <span className="h">Learn</span>
             <Link href="/how-to/getting-started">Getting started</Link>
             <Link href="/how-to">All guides</Link>
+            <Link href="/mrgd">MRGD, explained</Link>
             <a href="https://arxiv.org/abs/2508.11616">MRGD paper</a>
           </div>
           <div className="col">

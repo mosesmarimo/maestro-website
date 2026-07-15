@@ -1,6 +1,45 @@
 import Link from "next/link";
 import ScorePanel from "@/components/ScorePanel";
 import NewsletterForm from "@/components/NewsletterForm";
+import JsonLd from "@/components/JsonLd";
+
+const HOME_JSONLD = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      name: "Maestro IDE",
+      applicationCategory: "DeveloperApplication",
+      operatingSystem: "Windows, macOS, Linux",
+      description:
+        "A cross-platform AI agent orchestration studio and agent harness: visual multi-agent workflow canvas, model routing matrix for every modality, live agent map, replayable run logs, and multimodal reward-guided decoding (MRGD).",
+      url: "https://maestroide.com",
+      softwareHelp: "https://maestroide.com/how-to",
+      featureList: [
+        "Visual workflow canvas for multi-agent systems",
+        "Live agent map and dependency graphs",
+        "Unlimited model registry (hosted and local models)",
+        "Task routing matrix with fallback chains",
+        "Multimodal reward-guided decoding (MRGD)",
+        "Replayable run event logs and cost dashboards",
+        "Persistent memory and human-approved agent skills (in development)",
+        "Messaging gateway, schedules, sandboxed execution backends (in development)",
+        "MCP integration (in development)",
+      ],
+    },
+    {
+      "@type": "WebSite",
+      name: "Maestro IDE",
+      url: "https://maestroide.com",
+    },
+    {
+      "@type": "Organization",
+      name: "Maestro IDE",
+      url: "https://maestroide.com",
+      logo: "https://maestroide.com/img/logo.svg",
+    },
+  ],
+};
 
 const FEATURES: { title: string; body: string; dev?: boolean }[] = [
   { title: "Visual workflow canvas", body: "Drag agents, model calls, routers, tools, and control flow onto an infinite canvas. Typed ports reject bad connections and a Problems panel validates before you run." },
@@ -36,6 +75,7 @@ const STAGES: { tag: string; cls?: string; title: string; body: string }[] = [
 export default function HomePage() {
   return (
     <div className="home">
+      <JsonLd data={HOME_JSONLD} />
       <header className="hero">
         <div className="wrap">
           <p className="eyebrow">
@@ -49,9 +89,9 @@ export default function HomePage() {
             <span className="tint">Conduct</span> them.
           </h1>
           <p className="lede">
-            Maestro is a desktop IDE for multi-agent AI systems. Compose workflows on a canvas,
-            route every kind of task — text, code, images, video, speech — to the model you choose,
-            and watch every agent work, live, on a map of your system.
+            Maestro is a desktop IDE and agent harness for multi-agent AI systems. Compose
+            workflows on a canvas, route every kind of task — text, code, images, video, speech —
+            to the model you choose, and watch every agent work, live, on a map of your system.
           </p>
           <div className="hero-cta">
             <Link className="btn btn-primary" href="/features">Explore the features</Link>

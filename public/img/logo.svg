@@ -1,7 +1,8 @@
-<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Maestro IDE logo">
-  <!-- fermata over a node: the conductor's hold, drawn as an orchestration arc -->
-  <path d="M4 22 C 8 10, 24 10, 28 22" stroke="#8b7cf7" stroke-width="2.6" stroke-linecap="round" fill="none"/>
-  <circle cx="16" cy="21.5" r="3.4" fill="#f2efe7"/>
-  <circle cx="6" cy="24.5" r="2" fill="#4fc3e8"/>
-  <circle cx="26" cy="24.5" r="2" fill="#5fd3a2"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" fill="none">
+  <rect width="512" height="512" rx="112" fill="#03111E"/>
+  <rect x="18" y="18" width="476" height="476" rx="96" stroke="#244356" stroke-width="4"/>
+  <path d="M132 346V198L256 306L380 198V346" stroke="#3EAF86" stroke-width="48" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="132" cy="198" r="14" fill="#93CDB3"/>
+  <circle cx="256" cy="306" r="14" fill="#93CDB3"/>
+  <circle cx="380" cy="198" r="14" fill="#93CDB3"/>
 </svg>

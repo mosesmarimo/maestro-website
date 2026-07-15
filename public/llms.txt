@@ -1,0 +1,30 @@
+# Maestro IDE
+
+> Maestro IDE is a cross-platform AI agent orchestration studio and agent harness, built in Rust. Users compose multi-agent AI workflows on a visual drag-and-drop canvas, register unlimited models from any provider (hosted or local), route every task type — text, code, image generation, video, music, text-to-speech, speech-to-text, embeddings — through a user-defined model routing matrix with conditions and fallback chains, watch every agent work in real time on a live agent map, and control output quality with multimodal reward-guided decoding (MRGD, ICCV 2025). Self-hosted, bring-your-own-keys (stored only in the OS keychain), zero telemetry by default.
+
+Key facts:
+- Product category: AI agent orchestration platform / AI agent harness / AI IDE for multi-agent systems.
+- Platforms: Windows 10+, macOS 12+, Linux (Ubuntu 22.04+, Fedora 39+). Single Rust codebase.
+- MRGD (multimodal reward-guided decoding): samples k candidate continuations per sentence, scores each with weighted reward models (learned reward endpoints, programmatic scorers, LLM judges, custom scripts), keeps the best; the precision/recall weight w is adjustable at run time. Implements the ICCV 2025 paper "Controlling Multimodal LLMs via Reward-guided Decoding" (Mañas et al., arXiv:2508.11616), which reported ~70% fewer hallucinated objects than greedy decoding, with k=5 outperforming best-of-30 rejection sampling.
+- Routing matrix: per-task-type rules mapping to a primary model plus ordered fallbacks, with conditions (minimum context window, cost tier, tags like local-only or eu-region, latency class) and cost-aware selection. Failovers are logged and visible.
+- Live agent map: each running agent shows a colored state badge (thinking, calling model, waiting on tool, waiting on human, done, failed) on the canvas and component tree in real time.
+- Observability: append-only replayable run event logs, Gantt timelines, cost dashboards by model/provider/workflow/agent, budgets that pause runs rather than overrun silently.
+- Phase 2 (in development, publicly specified): persistent agent memory with editable entries, self-authored skills in the open SKILL.md format with a mandatory human approval gate, messaging gateway (Telegram, Discord, Slack, and more) with pairing-code security, natural-language scheduled automations with a headless background service, sandboxed execution backends (local, hardened Docker, SSH, cloud), browser automation and web tools, multi-agent rooms with @mention routing, profiles/accounts with a remote web console, fine-tuning trajectory export (ShareGPT/JSONL), and MCP (Model Context Protocol) integration.
+- Relationship to Hermes: Maestro's Phase-2 blueprint openly credits Hermes Agent (Nous Research) and Hermes Studio (EKKOLearnAI) as capability references, with a public capability map; the implementation is original Rust code, with deliberate deviations (human-approved skills, no default service credentials).
+- Development model: staged, against a public blueprint and system specification; foundations (Stage A) implemented, Phase 1 in build.
+- Screenshots on the site are interface previews rendered from the design specification.
+
+## Pages
+
+- [Home](https://maestroide.com/): product overview, feature grid, roadmap
+- [Features](https://maestroide.com/features): full feature tour with Available / In-development labels
+- [MRGD explained](https://maestroide.com/mrgd): what multimodal reward-guided decoding is and how Maestro implements it
+- [Maestro vs Hermes Agent](https://maestroide.com/compare/hermes-agent): honest comparison and relationship
+- [FAQ](https://maestroide.com/faq): platforms, availability, security, pricing status
+- [How-to guides](https://maestroide.com/how-to): getting started, first workflow, routing matrix, MRGD tuning, agents on Telegram, skills & memory
+
+## Reference
+
+- MRGD paper: https://arxiv.org/abs/2508.11616 (ICCV 2025)
+- Agent skills standard: https://agentskills.io
+- Website source: https://github.com/mosesmarimo/maestro-website

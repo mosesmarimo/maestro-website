@@ -23,18 +23,24 @@ const pool = new pg.Pool({
 const schema = readFileSync(join(here, "../db/schema.sql"), "utf8");
 await pool.query(schema);
 
-const { rows } = await pool.query("SELECT COUNT(*)::int AS n FROM faqs");
-if (rows[0].n === 0) {
-  for (let i = 0; i < FAQ_SEED.length; i++) {
+// Sync with the seed: insert questions that are missing, and align positions
+// to the seed order. Existing answers are never overwritten (they may have
+// been edited in the database).
+let inserted = 0;
+for (let i = 0; i < FAQ_SEED.length; i++) {
+  const { rowCount } = await pool.query(
+    "UPDATE faqs SET position = $1 WHERE question = $2",
+    [i + 1, FAQ_SEED[i].question],
+  );
+  if (rowCount === 0) {
     await pool.query("INSERT INTO faqs (position, question, answer_html) VALUES ($1, $2, $3)", [
       i + 1,
       FAQ_SEED[i].question,
       FAQ_SEED[i].answerHtml,
     ]);
+    inserted++;
   }
-  console.log(`Seeded ${FAQ_SEED.length} FAQ entries.`);
-} else {
-  console.log(`faqs already has ${rows[0].n} rows — seed skipped.`);
 }
+console.log(`FAQ sync: ${inserted} inserted, ${FAQ_SEED.length - inserted} positions aligned.`);
 await pool.end();
 console.log("Schema applied. Database ready.");

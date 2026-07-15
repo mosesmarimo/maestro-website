@@ -1,77 +1,77 @@
 <svg viewBox="0 0 1280 800" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, 'Segoe UI', sans-serif" role="img" aria-label="Maestro IDE memory and skills panel">
-  <rect width="1280" height="800" rx="14" fill="#0d1120"/>
-  <rect x="0" y="0" width="1280" height="42" rx="14" fill="#131829"/>
-  <rect x="0" y="28" width="1280" height="14" fill="#131829"/>
+  <rect width="1280" height="800" rx="14" fill="#03111E"/>
+  <rect x="0" y="0" width="1280" height="42" rx="14" fill="#0B1F2E"/>
+  <rect x="0" y="28" width="1280" height="14" fill="#0B1F2E"/>
   <circle cx="24" cy="21" r="6" fill="#e86a8a"/><circle cx="44" cy="21" r="6" fill="#f2b75c"/><circle cx="64" cy="21" r="6" fill="#5fd3a2"/>
-  <text x="640" y="26" text-anchor="middle" fill="#98a0b8" font-size="12.5">Memory &amp; Skills · Maestro IDE</text>
+  <text x="640" y="26" text-anchor="middle" fill="#93A9B8" font-size="12.5">Memory &amp; Skills · Maestro IDE</text>
 
   <!-- memory half -->
-  <text x="48" y="94" fill="#f2efe7" font-size="22" font-weight="650">Memory</text>
-  <text x="48" y="118" fill="#98a0b8" font-size="12.5">Every entry visible, editable, deletable. Files on disk — yours to version.</text>
+  <text x="48" y="94" fill="#E8F0F6" font-size="22" font-weight="650">Memory</text>
+  <text x="48" y="118" fill="#93A9B8" font-size="12.5">Every entry visible, editable, deletable. Files on disk — yours to version.</text>
 
   <g>
-    <rect x="48" y="140" width="576" height="86" rx="10" fill="#131829" stroke="#232a44"/>
-    <text x="68" y="166" fill="#5c6480" font-size="10" font-family="ui-monospace, Menlo, monospace">PREFERENCE · GLOBAL · updated 2d ago</text>
-    <text x="68" y="192" fill="#c6cadb" font-size="13">Prefers TypeScript examples; avoids Python unless asked.</text>
-    <text x="68" y="212" fill="#5c6480" font-size="11" font-family="ui-monospace, Menlo, monospace">edit · delete · history</text>
+    <rect x="48" y="140" width="576" height="86" rx="10" fill="#0B1F2E" stroke="#1B3242"/>
+    <text x="68" y="166" fill="#5E7A8C" font-size="10" font-family="ui-monospace, Menlo, monospace">PREFERENCE · GLOBAL · updated 2d ago</text>
+    <text x="68" y="192" fill="#C2D2DC" font-size="13">Prefers TypeScript examples; avoids Python unless asked.</text>
+    <text x="68" y="212" fill="#5E7A8C" font-size="11" font-family="ui-monospace, Menlo, monospace">edit · delete · history</text>
 
-    <rect x="48" y="238" width="576" height="86" rx="10" fill="#131829" stroke="#232a44"/>
-    <text x="68" y="264" fill="#5c6480" font-size="10" font-family="ui-monospace, Menlo, monospace">PROJECT CONTEXT · caption-studio · updated 5h ago</text>
-    <text x="68" y="290" fill="#c6cadb" font-size="13">Brand voice: plain, confident, no exclamation marks. Hero images 3:2.</text>
-    <text x="68" y="310" fill="#5c6480" font-size="11" font-family="ui-monospace, Menlo, monospace">edit · delete · history</text>
+    <rect x="48" y="238" width="576" height="86" rx="10" fill="#0B1F2E" stroke="#1B3242"/>
+    <text x="68" y="264" fill="#5E7A8C" font-size="10" font-family="ui-monospace, Menlo, monospace">PROJECT CONTEXT · caption-studio · updated 5h ago</text>
+    <text x="68" y="290" fill="#C2D2DC" font-size="13">Brand voice: plain, confident, no exclamation marks. Hero images 3:2.</text>
+    <text x="68" y="310" fill="#5E7A8C" font-size="11" font-family="ui-monospace, Menlo, monospace">edit · delete · history</text>
 
-    <rect x="48" y="336" width="576" height="86" rx="10" fill="#131829" stroke="#232a44"/>
-    <text x="68" y="362" fill="#5c6480" font-size="10" font-family="ui-monospace, Menlo, monospace">ENVIRONMENT · GLOBAL · updated 1w ago</text>
-    <text x="68" y="388" fill="#c6cadb" font-size="13">Ollama runs on port 11434; SSH backend "render-box" has the GPUs.</text>
-    <text x="68" y="408" fill="#5c6480" font-size="11" font-family="ui-monospace, Menlo, monospace">edit · delete · history</text>
+    <rect x="48" y="336" width="576" height="86" rx="10" fill="#0B1F2E" stroke="#1B3242"/>
+    <text x="68" y="362" fill="#5E7A8C" font-size="10" font-family="ui-monospace, Menlo, monospace">ENVIRONMENT · GLOBAL · updated 1w ago</text>
+    <text x="68" y="388" fill="#C2D2DC" font-size="13">Ollama runs on port 11434; SSH backend "render-box" has the GPUs.</text>
+    <text x="68" y="408" fill="#5E7A8C" font-size="11" font-family="ui-monospace, Menlo, monospace">edit · delete · history</text>
   </g>
 
   <!-- recall search -->
-  <rect x="48" y="446" width="576" height="120" rx="10" fill="#0a0d18" stroke="#232a44"/>
-  <text x="68" y="474" fill="#5c6480" font-size="10.5" letter-spacing="2" font-family="ui-monospace, Menlo, monospace">CROSS-SESSION RECALL</text>
-  <rect x="68" y="486" width="536" height="34" rx="8" fill="#131829" stroke="#232a44"/>
-  <text x="84" y="508" fill="#98a0b8" font-size="12.5">what did we decide about the pricing page?</text>
+  <rect x="48" y="446" width="576" height="120" rx="10" fill="#020C16" stroke="#1B3242"/>
+  <text x="68" y="474" fill="#5E7A8C" font-size="10.5" letter-spacing="2" font-family="ui-monospace, Menlo, monospace">CROSS-SESSION RECALL</text>
+  <rect x="68" y="486" width="536" height="34" rx="8" fill="#0B1F2E" stroke="#1B3242"/>
+  <text x="84" y="508" fill="#93A9B8" font-size="12.5">what did we decide about the pricing page?</text>
   <text x="68" y="546" fill="#5fd3a2" font-size="12">→ 3 sessions matched · summarized with sources · Jun 24: "annual plan leads, monthly de-emphasized"</text>
 
   <!-- curation note -->
-  <rect x="48" y="586" width="576" height="80" rx="10" fill="#131829" stroke="#232a44"/>
-  <text x="68" y="614" fill="#5c6480" font-size="10.5" letter-spacing="2" font-family="ui-monospace, Menlo, monospace">CURATION · WEEKLY</text>
-  <text x="68" y="640" fill="#c6cadb" font-size="12.5">Last sweep: merged 3 duplicates, dropped 2 stale entries. <tspan fill="#4fc3e8">Review journal ›</tspan></text>
+  <rect x="48" y="586" width="576" height="80" rx="10" fill="#0B1F2E" stroke="#1B3242"/>
+  <text x="68" y="614" fill="#5E7A8C" font-size="10.5" letter-spacing="2" font-family="ui-monospace, Menlo, monospace">CURATION · WEEKLY</text>
+  <text x="68" y="640" fill="#C2D2DC" font-size="12.5">Last sweep: merged 3 duplicates, dropped 2 stale entries. <tspan fill="#4fc3e8">Review journal ›</tspan></text>
 
   <!-- skills half -->
-  <line x1="660" y1="70" x2="660" y2="770" stroke="#232a44"/>
-  <text x="696" y="94" fill="#f2efe7" font-size="22" font-weight="650">Skills</text>
-  <text x="696" y="118" fill="#98a0b8" font-size="12.5">Agents draft skills after hard tasks. Nothing activates without your approval.</text>
+  <line x1="660" y1="70" x2="660" y2="770" stroke="#1B3242"/>
+  <text x="696" y="94" fill="#E8F0F6" font-size="22" font-weight="650">Skills</text>
+  <text x="696" y="118" fill="#93A9B8" font-size="12.5">Agents draft skills after hard tasks. Nothing activates without your approval.</text>
 
-  <rect x="696" y="140" width="536" height="118" rx="10" fill="#171331" stroke="#8b7cf7" stroke-width="1.5"/>
-  <text x="716" y="168" fill="#8b7cf7" font-size="10.5" letter-spacing="2" font-family="ui-monospace, Menlo, monospace">DRAFT · AWAITING YOUR REVIEW</text>
-  <text x="716" y="194" fill="#f2efe7" font-size="14" font-weight="600">deploy-preview-env</text>
-  <text x="716" y="216" fill="#98a0b8" font-size="12.5">Drafted by agent "devops" after a 14-step task succeeded. Captures the</text>
-  <text x="716" y="234" fill="#98a0b8" font-size="12.5">full preview-environment procedure with rollback steps.</text>
+  <rect x="696" y="140" width="536" height="118" rx="10" fill="#0A2921" stroke="#3EAF86" stroke-width="1.5"/>
+  <text x="716" y="168" fill="#3EAF86" font-size="10.5" letter-spacing="2" font-family="ui-monospace, Menlo, monospace">DRAFT · AWAITING YOUR REVIEW</text>
+  <text x="716" y="194" fill="#E8F0F6" font-size="14" font-weight="600">deploy-preview-env</text>
+  <text x="716" y="216" fill="#93A9B8" font-size="12.5">Drafted by agent "devops" after a 14-step task succeeded. Captures the</text>
+  <text x="716" y="234" fill="#93A9B8" font-size="12.5">full preview-environment procedure with rollback steps.</text>
   <rect x="716" y="244" width="92" height="0.1" fill="none"/>
-  <rect x="1064" y="182" width="76" height="30" rx="7" fill="#5fd3a2"/><text x="1102" y="202" text-anchor="middle" fill="#0d1120" font-size="12" font-weight="700">Approve</text>
-  <rect x="1148" y="182" width="66" height="30" rx="7" fill="#1a2036" stroke="#232a44"/><text x="1181" y="202" text-anchor="middle" fill="#98a0b8" font-size="12">Reject</text>
+  <rect x="1064" y="182" width="76" height="30" rx="7" fill="#5fd3a2"/><text x="1102" y="202" text-anchor="middle" fill="#03111E" font-size="12" font-weight="700">Approve</text>
+  <rect x="1148" y="182" width="66" height="30" rx="7" fill="#12293A" stroke="#1B3242"/><text x="1181" y="202" text-anchor="middle" fill="#93A9B8" font-size="12">Reject</text>
 
   <g>
-    <rect x="696" y="278" width="536" height="76" rx="10" fill="#131829" stroke="#232a44"/>
+    <rect x="696" y="278" width="536" height="76" rx="10" fill="#0B1F2E" stroke="#1B3242"/>
     <text x="716" y="306" fill="#5fd3a2" font-size="10" font-family="ui-monospace, Menlo, monospace">APPROVED · v3 · used 41×</text>
-    <text x="716" y="330" fill="#f2efe7" font-size="13.5" font-weight="600">github-release-notes</text>
-    <text x="716" y="348" fill="#98a0b8" font-size="12">Drafts release notes from merged PRs since the last tag.</text>
+    <text x="716" y="330" fill="#E8F0F6" font-size="13.5" font-weight="600">github-release-notes</text>
+    <text x="716" y="348" fill="#93A9B8" font-size="12">Drafts release notes from merged PRs since the last tag.</text>
 
-    <rect x="696" y="366" width="536" height="76" rx="10" fill="#131829" stroke="#232a44"/>
+    <rect x="696" y="366" width="536" height="76" rx="10" fill="#0B1F2E" stroke="#1B3242"/>
     <text x="716" y="394" fill="#5fd3a2" font-size="10" font-family="ui-monospace, Menlo, monospace">APPROVED · v1 · used 12×</text>
-    <text x="716" y="418" fill="#f2efe7" font-size="13.5" font-weight="600">diagram-from-spec</text>
-    <text x="716" y="436" fill="#98a0b8" font-size="12">Turns a written architecture section into a mermaid diagram.</text>
+    <text x="716" y="418" fill="#E8F0F6" font-size="13.5" font-weight="600">diagram-from-spec</text>
+    <text x="716" y="436" fill="#93A9B8" font-size="12">Turns a written architecture section into a mermaid diagram.</text>
 
-    <rect x="696" y="454" width="536" height="76" rx="10" fill="#131829" stroke="#232a44"/>
+    <rect x="696" y="454" width="536" height="76" rx="10" fill="#0B1F2E" stroke="#1B3242"/>
     <text x="716" y="482" fill="#f2b75c" font-size="10" font-family="ui-monospace, Menlo, monospace">EDIT PROPOSED · v2 → v3 · diff ready</text>
-    <text x="716" y="506" fill="#f2efe7" font-size="13.5" font-weight="600">web-research-cited</text>
-    <text x="716" y="524" fill="#98a0b8" font-size="12">Agent proposes adding a source-dedup step after 3 noisy runs.</text>
+    <text x="716" y="506" fill="#E8F0F6" font-size="13.5" font-weight="600">web-research-cited</text>
+    <text x="716" y="524" fill="#93A9B8" font-size="12">Agent proposes adding a source-dedup step after 3 noisy runs.</text>
   </g>
 
-  <rect x="696" y="550" width="536" height="116" rx="10" fill="#0a0d18" stroke="#232a44"/>
-  <text x="716" y="578" fill="#5c6480" font-size="10.5" letter-spacing="2" font-family="ui-monospace, Menlo, monospace">LIBRARY · SKILL.MD OPEN STANDARD</text>
-  <text x="716" y="606" fill="#c6cadb" font-size="12.5">44 skills enabled · agentskills.io-compatible import/export</text>
-  <text x="716" y="630" fill="#c6cadb" font-size="12.5">Imports pass a safety scan before they can activate.</text>
-  <text x="716" y="654" fill="#5c6480" font-size="11.5" font-family="ui-monospace, Menlo, monospace">github · diagramming · mlops · research · media · notes …</text>
+  <rect x="696" y="550" width="536" height="116" rx="10" fill="#020C16" stroke="#1B3242"/>
+  <text x="716" y="578" fill="#5E7A8C" font-size="10.5" letter-spacing="2" font-family="ui-monospace, Menlo, monospace">LIBRARY · SKILL.MD OPEN STANDARD</text>
+  <text x="716" y="606" fill="#C2D2DC" font-size="12.5">44 skills enabled · agentskills.io-compatible import/export</text>
+  <text x="716" y="630" fill="#C2D2DC" font-size="12.5">Imports pass a safety scan before they can activate.</text>
+  <text x="716" y="654" fill="#5E7A8C" font-size="11.5" font-family="ui-monospace, Menlo, monospace">github · diagramming · mlops · research · media · notes …</text>
 </svg>

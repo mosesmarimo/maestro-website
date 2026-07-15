@@ -9,6 +9,16 @@ export const FAQ_SEED: FaqEntry[] = [
       "<p>A desktop application for building, running, and observing multi-agent AI systems. You compose workflows visually on a canvas, register the models you want to use (any provider, hosted or local), define a routing matrix that sends each kind of task to the right model, and watch every agent work in real time on a live map of your system. It also implements MRGD — reward-guided decoding — as a quality dial on any generation step.</p>",
   },
   {
+    question: "What is an AI agent harness — and is Maestro one?",
+    answerHtml:
+      "<p>An <strong>AI agent harness</strong> is the scaffolding around a language model that turns it into a working agent: the loop that feeds it tools, executes its tool calls, manages context and memory, enforces budgets and permissions, and records what happened. Frameworks give you this as a library; Maestro gives it to you as an instrument — the harness is visual (the canvas and live agent map), the guardrails are first-class (budgets, approvals, sandbox policies), and every run is a replayable event log. So yes: Maestro is an agent harness, an <strong>AI agent orchestration platform</strong> on top of it, and an IDE around both.</p>",
+  },
+  {
+    question: "What is AI agent orchestration?",
+    answerHtml:
+      "<p><strong>AI agent orchestration</strong> is coordinating multiple AI agents — each with its own role, model, tools, and memory — so they work together on a task: sequencing them, running them in parallel, routing the right work to the right model, handling failures, and keeping humans in the loop where it matters. In Maestro, orchestration is a drawing: you compose the system on a canvas with typed connections, a routing matrix decides which model serves each kind of task, and the live agent map shows exactly where every agent is working while the system runs.</p>",
+  },
+  {
     question: "Which platforms does it run on?",
     answerHtml:
       "<p>Windows 10+ (x64), macOS 12+ (Apple Silicon and Intel), and mainstream Linux distributions (Ubuntu 22.04+, Fedora 39+), from platform-standard installers. It's a single Rust codebase across all three — the core feature set is identical everywhere.</p>",

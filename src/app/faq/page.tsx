@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getFaqs } from "@/lib/db";
+import JsonLd from "@/components/JsonLd";
+
+const stripTags = (html: string) => html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
 
 export const metadata: Metadata = {
   title: "FAQ",
@@ -14,8 +17,18 @@ export const revalidate = 300;
 
 export default async function FaqPage() {
   const faqs = await getFaqs();
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: { "@type": "Answer", text: stripTags(f.answerHtml) },
+    })),
+  };
   return (
     <>
+      <JsonLd data={faqJsonLd} />
       <header className="page-hero">
         <div className="wrap">
           <p className="eyebrow">Questions, answered plainly</p>
