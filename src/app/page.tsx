@@ -35,7 +35,7 @@ const STAGES: { tag: string; cls?: string; title: string; body: string }[] = [
 
 export default function HomePage() {
   return (
-    <>
+    <div className="home">
       <header className="hero">
         <div className="wrap">
           <p className="eyebrow">
@@ -214,6 +214,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

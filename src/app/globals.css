@@ -190,6 +190,23 @@ h3 { font-size: 1.25rem; font-family: var(--body); font-weight: 650; }
 @keyframes chipB { 0%,20% { transform: translate(0,0);} 45%,70% { transform: translate(210px,44px);} 88%,100% { transform: translate(456px,10px);} }
 @keyframes chipC { 0%,35% { transform: translate(0,0);} 60%,100% { transform: translate(228px,0px);} }
 
+/* ---------- Home page: center components ---------- */
+.home .hero { text-align: center; }
+.home .hero .lede { margin-left: auto; margin-right: auto; }
+.home .hero-cta { justify-content: center; }
+.home .section-head {
+  margin: 0 auto 48px;
+  text-align: center;
+}
+.home .section-head .lede { margin-left: auto; margin-right: auto; }
+.home .split { text-align: left; } /* reading columns stay left-aligned inside centered sections */
+.home .stages {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: left;
+}
+.home .fcard, .home .pillar { text-align: left; }
+
 /* ---------- Sections ---------- */
 .section { padding: 88px 0; }
 .section.alt { background: var(--pit-deep); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
