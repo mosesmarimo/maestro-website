@@ -1,0 +1,15 @@
+# Local development database. Production uses a hosted PostgreSQL
+# (e.g. Neon via the Vercel Marketplace) with POSTGRES_URL injected.
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: maestro
+      POSTGRES_PASSWORD: maestro
+      POSTGRES_DB: maestro_website
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+volumes:
+  pgdata:

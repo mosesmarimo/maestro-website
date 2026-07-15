@@ -1,30 +1,62 @@
 # maestro-website
 
-Marketing and documentation website for **Maestro IDE** — a cross-platform AI studio for orchestrating multi-agent systems (visual workflow canvas, live agent map, model routing matrix, and MRGD reward-guided decoding).
+Marketing and documentation website for **Maestro IDE** — a cross-platform AI studio for orchestrating multi-agent systems (visual workflow canvas, live agent map, model routing matrix, MRGD reward-guided decoding).
+
+**Production:** https://maestroide.com (Vercel; also https://maestro-website-eight.vercel.app)
+
+## Stack
+
+- **Next.js 16** (App Router, React Server Components) + TypeScript
+- **PostgreSQL** (Neon via the Vercel Marketplace) — serves the FAQ content and stores newsletter subscribers; the schema is applied lazily on first use and the site falls back to bundled content if the database is unreachable
+- Design system in plain CSS (`src/app/globals.css`); fonts via `next/font` (Fraunces · Instrument Sans · JetBrains Mono)
+- Hosted on **Vercel**, custom domain `maestroide.com`
 
 ## Structure
 
 ```
-index.html            Landing page: animated hero, pillars, MRGD, feature grid, roadmap
-features.html         Full feature tour with phase labels (Available / In development)
-faq.html              Frequently asked questions
-how-to/               Six step-by-step guides + hub page
-assets/css/site.css   Design system (palette derived from the product's agent-state legend)
-assets/js/site.js     Scroll reveal + nav state (no frameworks)
-assets/img/*.svg      Logo and interface previews rendered from the design spec
+src/app/
+  page.tsx                 Landing: animated hero, pillars, MRGD, feature grid, roadmap, newsletter
+  features/page.tsx        Full feature tour with phase labels
+  faq/page.tsx             FAQ — served from PostgreSQL (ISR, 5 min) with seed fallback
+  how-to/page.tsx          Guides hub
+  how-to/[slug]/page.tsx   Six guides (SSG from src/lib/guides.ts)
+  actions.ts               subscribe() server action → subscribers table
+src/lib/
+  db.ts                    pg pool, lazy schema, getFaqs/addSubscriber
+  faq-data.ts              FAQ seed + fallback content
+  guides.ts                Guide content
+src/components/            Nav, Footer, ScorePanel (animated hero), NewsletterForm, RevealEffects
+db/schema.sql              Reference schema (subscribers, faqs)
+scripts/seed.mjs           Eager schema apply + FAQ seed for fresh databases
+public/img/*.svg           Logo + interface previews rendered from the design spec
 ```
-
-Static site — no build step. All content is guided by the Maestro Product Blueprint (MSTRO-BLU-001 v3.0); feature claims are labeled honestly as available or in development, and interface previews are rendered from the system specification (MSTRO-SPEC-001).
 
 ## Develop locally
 
 ```bash
-python3 -m http.server 4173
-# open http://127.0.0.1:4173/
+npm install
+docker compose up -d          # local PostgreSQL (optional — site works without it)
+cp .env.example .env.local    # or `vercel env pull` for the Neon database
+npm run seed                  # apply schema + seed FAQs (optional; happens lazily too)
+npm run dev
 ```
 
-## Design notes
+## Database
 
-- Palette: deep indigo pit `#0b0e1a`, warm ivory text, and the agent-state accent set from the product itself — violet (thinking), cyan (calling model), amber (waiting), green (done).
-- Type: Fraunces (display) · Instrument Sans (body) · JetBrains Mono (labels/code), via Google Fonts.
-- The hero is a CSS-animated SVG "live score": a workflow graph on musical staff lines with agent chips moving between nodes. Honors `prefers-reduced-motion`.
+`POSTGRES_URL` (or `DATABASE_URL`) selects the database. Production uses Neon, provisioned through the Vercel Marketplace and injected automatically. Tables:
+
+- `faqs` — FAQ entries (seeded from `src/lib/faq-data.ts`, editable in the database thereafter)
+- `subscribers` — newsletter emails from the landing-page form (unique, idempotent inserts)
+
+## CI/CD
+
+`.github/workflows/ci.yml`:
+
+- **CI** — every push and PR: `npm ci` → typecheck → production build.
+- **CD** — pushes to `main` deploy to production. Two paths:
+  1. **Vercel Git integration** (active now): Vercel builds and deploys each push automatically, with preview deployments for PRs.
+  2. **Actions-controlled deploy**: add a `VERCEL_TOKEN` repository secret (create at vercel.com/account/tokens) and the workflow's deploy job takes over (`vercel build` + `vercel deploy --prebuilt --prod`). Disable Git deployments in the Vercel project settings if you want Actions to be the only deployer.
+
+## Domain
+
+`maestroide.com` and `www.maestroide.com` are attached to the Vercel project. DNS must point at Vercel (at the current registrar: `A @ 76.76.21.21` and `CNAME www cname.vercel-dns.com`, or switch nameservers to `ns1`/`ns2.vercel-dns.com`).

@@ -1,0 +1,64 @@
+name: CI/CD
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  ci:
+    name: Typecheck & build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run build
+
+  deploy:
+    # Production deploys also run automatically via the Vercel Git integration.
+    # This job enables Actions-controlled deploys: add a VERCEL_TOKEN repo secret
+    # (create at vercel.com/account/tokens) and it takes over; without the secret
+    # it skips cleanly. To make Actions the ONLY deployer, disable Git deployments
+    # in the Vercel project settings afterwards.
+    name: Deploy to Vercel (production)
+    needs: ci
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment: production
+    env:
+      VERCEL_ORG_ID: team_GEt6Ej8pxIh5ViNmJBmeWHLO
+      VERCEL_PROJECT_ID: prj_jvzw6i9mcoKniqlW854qYHEJkH5P
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check for deploy token
+        id: token
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          if [ -n "$VERCEL_TOKEN" ]; then
+            echo "present=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "present=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::VERCEL_TOKEN secret not set — skipping Actions deploy (Vercel Git integration deploys this push instead)."
+          fi
+      - uses: actions/setup-node@v4
+        if: steps.token.outputs.present == 'true'
+        with:
+          node-version: 24
+      - name: Install Vercel CLI
+        if: steps.token.outputs.present == 'true'
+        run: npm install -g vercel@latest
+      - name: Pull environment
+        if: steps.token.outputs.present == 'true'
+        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Build
+        if: steps.token.outputs.present == 'true'
+        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Deploy
+        if: steps.token.outputs.present == 'true'
+        run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
