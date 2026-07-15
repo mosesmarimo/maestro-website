@@ -1,6 +1,7 @@
 import Link from "next/link";
 import ScorePanel from "@/components/ScorePanel";
 import NewsletterForm from "@/components/NewsletterForm";
+import HeroHeadline from "@/components/HeroHeadline";
 import JsonLd from "@/components/JsonLd";
 
 const HOME_JSONLD = {
@@ -79,13 +80,7 @@ export default function HomePage() {
       <header className="hero">
         <div className="wrap">
           <p className="eyebrow">The AI agent orchestration studio</p>
-          <h1>
-            Stop guessing what
-            <br />
-            your agents are doing.
-            <br />
-            <span className="tint">Conduct</span> them.
-          </h1>
+          <HeroHeadline />
           <p className="lede">
             Maestro is a desktop IDE and agent harness for multi-agent AI systems. Compose
             workflows on a canvas, route every kind of task — text, code, images, video, speech —

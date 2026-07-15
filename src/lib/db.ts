@@ -45,6 +45,14 @@ async function ensureSchema(p: Pool): Promise<void> {
           answer_html TEXT NOT NULL,
           published BOOLEAN NOT NULL DEFAULT TRUE
         );
+        CREATE TABLE IF NOT EXISTS support_messages (
+          id SERIAL PRIMARY KEY,
+          name TEXT NOT NULL,
+          email TEXT NOT NULL,
+          topic TEXT NOT NULL,
+          message TEXT NOT NULL,
+          created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+        );
       `);
       const { rows } = await p.query("SELECT COUNT(*)::int AS n FROM faqs");
       if (rows[0].n === 0) {
@@ -79,6 +87,26 @@ export async function getFaqs(): Promise<FaqEntry[]> {
 }
 
 export type SubscribeResult = { ok: true } | { ok: false; error: string };
+
+export async function addSupportMessage(msg: {
+  name: string;
+  email: string;
+  topic: string;
+  message: string;
+}): Promise<SubscribeResult> {
+  const p = getPool();
+  if (!p) return { ok: false, error: "The form isn't available right now — email support@maestroide.com instead." };
+  try {
+    await ensureSchema(p);
+    await p.query(
+      "INSERT INTO support_messages (name, email, topic, message) VALUES ($1, $2, $3, $4)",
+      [msg.name, msg.email, msg.topic, msg.message],
+    );
+    return { ok: true };
+  } catch {
+    return { ok: false, error: "The form isn't available right now — email support@maestroide.com instead." };
+  }
+}
 
 export async function addSubscriber(email: string, source: string): Promise<SubscribeResult> {
   const p = getPool();

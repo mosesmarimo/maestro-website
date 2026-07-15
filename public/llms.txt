@@ -17,6 +17,8 @@ Key facts:
 ## Pages
 
 - [Home](https://maestroide.com/): product overview, feature grid, roadmap
+- [Download](https://maestroide.com/download): preview builds for Windows (x64), macOS (Apple Silicon and Intel), and Linux (AppImage/deb)
+- [Support](https://maestroide.com/support): contact form and support email (support@maestroide.com)
 - [Features](https://maestroide.com/features): full feature tour with Available / In-development labels
 - [MRGD explained](https://maestroide.com/mrgd): what multimodal reward-guided decoding is and how Maestro implements it
 - [Maestro vs Hermes Agent](https://maestroide.com/compare/hermes-agent): honest comparison and relationship
@@ -27,4 +29,4 @@ Key facts:
 
 - MRGD paper: https://arxiv.org/abs/2508.11616 (ICCV 2025)
 - Agent skills standard: https://agentskills.io
-- Website source: https://github.com/mosesmarimo/maestro-website
+- Support: support@maestroide.com

@@ -21,6 +21,7 @@ export default function Footer() {
         <div className="cols">
           <div className="col">
             <span className="h">Product</span>
+            <Link href="/download">Download</Link>
             <Link href="/features">Features</Link>
             <Link href="/#roadmap">Roadmap</Link>
             <Link href="/compare/hermes-agent">vs Hermes Agent</Link>
@@ -34,8 +35,9 @@ export default function Footer() {
             <a href="https://arxiv.org/abs/2508.11616">MRGD paper</a>
           </div>
           <div className="col">
-            <span className="h">Project</span>
-            <a href="https://github.com/mosesmarimo/maestro-website">Website source</a>
+            <span className="h">Support</span>
+            <Link href="/support">Contact support</Link>
+            <a href="mailto:support@maestroide.com">support@maestroide.com</a>
           </div>
         </div>
       </div>

@@ -122,7 +122,7 @@ export default function HermesComparePage() {
           <p style={{ color: "var(--faint)", fontSize: "0.85rem", marginTop: 18 }}>
             Hermes Agent and Hermes Studio are projects of Nous Research and EKKOLearnAI
             respectively; details reflect their public documentation as of mid-2026. Corrections
-            welcome via the website repository.
+            welcome at <a href="mailto:support@maestroide.com">support@maestroide.com</a>.
           </p>
 
           <div className="hero-cta" style={{ marginTop: 28 }}>

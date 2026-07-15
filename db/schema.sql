@@ -15,3 +15,12 @@ CREATE TABLE IF NOT EXISTS faqs (
   answer_html TEXT NOT NULL,
   published   BOOLEAN NOT NULL DEFAULT TRUE
 );
+
+CREATE TABLE IF NOT EXISTS support_messages (
+  id          SERIAL PRIMARY KEY,
+  name        TEXT NOT NULL,
+  email       TEXT NOT NULL,
+  topic       TEXT NOT NULL,
+  message     TEXT NOT NULL,
+  created_at  TIMESTAMPTZ NOT NULL DEFAULT now()
+);

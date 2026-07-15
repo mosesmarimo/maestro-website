@@ -7,7 +7,7 @@ const LINKS = [
   { href: "/features", label: "Features" },
   { href: "/how-to", label: "How-to" },
   { href: "/faq", label: "FAQ" },
-  { href: "/#roadmap", label: "Roadmap" },
+  { href: "/support", label: "Support" },
 ];
 
 export default function Nav() {
@@ -31,9 +31,9 @@ export default function Nav() {
               {l.label}
             </Link>
           ))}
-          <a className="btn-gh" href="https://github.com/mosesmarimo/maestro-website">
-            GitHub
-          </a>
+          <Link className="btn-gh" href="/download">
+            Download
+          </Link>
         </div>
       </div>
     </nav>
