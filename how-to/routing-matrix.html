@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The routing matrix — Maestro IDE guides</title>
+<meta name="description" content="How to route text, code, image, video, and speech tasks to different models in Maestro IDE: rules, conditions, fallback chains, cost-aware routing, and the test console.">
+<link rel="icon" type="image/svg+xml" href="../assets/img/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="../index.html"><img src="../assets/img/logo.svg" alt="" width="26" height="26">Maestro IDE</a>
+    <div class="nav-links">
+      <a href="../features.html">Features</a>
+      <a href="index.html" class="active">How-to</a>
+      <a href="../faq.html">FAQ</a>
+      <a href="../index.html#roadmap">Roadmap</a>
+      <a class="btn-gh" href="https://github.com/mosesmarimo/maestro-website">GitHub</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap docs">
+  <aside class="docs-side">
+    <div class="group">Start here</div>
+    <a href="getting-started.html">Getting started</a>
+    <a href="first-workflow.html">Your first real workflow</a>
+    <div class="group">Core</div>
+    <a href="routing-matrix.html" class="active">The routing matrix</a>
+    <a href="mrgd-tuning.html">MRGD tuning</a>
+    <div class="group">Agent platform</div>
+    <a href="telegram-agent.html">Agents on Telegram</a>
+    <a href="skills-memory.html">Skills &amp; memory</a>
+  </aside>
+
+  <main class="docs-main">
+    <p class="eyebrow">Core · about 20 minutes</p>
+    <h1>Master the routing matrix</h1>
+    <p class="lede">The matrix is Maestro's answer to a simple problem: different tasks deserve different models, and hard-coding models into workflows makes both fragile. Route by task type once; change models forever after in one place.</p>
+
+    <figure class="shotfig">
+      <div class="frame"><img src="../assets/img/shot-routing.svg" alt="Routing matrix editor showing rules for every task type with conditions, primaries, and fallback chains"></div>
+      <figcaption>One row per task type. First matching rule wins; fallbacks fail over in order.</figcaption>
+    </figure>
+
+    <h2>How resolution works</h2>
+    <p>When a node routes by task type, Maestro walks the enabled rules for that type, top to bottom, and picks the first whose <em>conditions</em> all hold. The chosen rule contributes a primary model and an ordered fallback chain. Every decision is logged with its reasons — which rule matched, which models were rejected and why.</p>
+
+    <h2>Route media in seconds</h2>
+    <ol class="steps">
+      <li>Open <strong>Routing</strong>. The default matrix already has one row per task type: <code>image-generation</code>, <code>video-generation</code>, <code>audio-generation</code>, <code>tts</code>, <code>stt</code>, <code>embedding</code>, and the text/code rows.</li>
+      <li>On the <code>image-generation</code> row, open the Primary dropdown and pick your image model. That's it — every image node and every agent that generates images now uses it.</li>
+      <li>Do the same for <code>tts</code> (say, ElevenLabs hosted) and <code>stt</code> (say, local Whisper). Mixing hosted and local per task is the point.</li>
+    </ol>
+
+    <h2>Add conditions</h2>
+    <p>Conditions refine when a rule applies. All conditions on a rule must hold:</p>
+    <ul>
+      <li><strong>Minimum context window</strong> — skip small models for long-document tasks.</li>
+      <li><strong>Max cost tier</strong> — free / cheap / standard / premium ceilings.</li>
+      <li><strong>Required tags</strong> — e.g. <code>local-only</code> for sensitive projects, <code>eu-region</code> for data-boundary rules. The router refuses to route tagged work to untagged models.</li>
+      <li><strong>Input has image</strong> — send vision-bearing requests to models that can see.</li>
+      <li><strong>Latency class</strong> — realtime rows for interactive work, batch rows for overnight jobs.</li>
+    </ul>
+    <p>Stack two rules for the same task type: a strict rule first (long-context, premium), a general rule below it. First match wins.</p>
+
+    <h2>Design good fallback chains</h2>
+    <ol class="steps">
+      <li>Give every important rule at least one fallback — the demo that survives a provider outage is the one with a chain.</li>
+      <li>Order matters: put the closest-quality substitute first and a local model last as the always-available floor.</li>
+      <li>Enable <strong>prefer cheapest</strong> on rules where quality is fungible — the router re-orders eligible candidates by estimated cost.</li>
+    </ol>
+    <div class="callout"><strong>Failover is visible.</strong> When a primary fails and a fallback answers, the run log records it and the run detail shows which model actually served each call. You'll never wonder silently.</div>
+
+    <h2>Test without spending</h2>
+    <ol class="steps">
+      <li>Open the <strong>test console</strong> in the Routing view.</li>
+      <li>Describe a request — "transcribe this voice memo", attach-type: audio — and read the decision: matched rule, chosen model, rejected candidates with reasons.</li>
+      <li>Keep multiple named matrices — <code>cheap-dev</code> for iteration, <code>prod-quality</code> for real runs — and switch per run. Matrices are project files; diff them in git like everything else.</li>
+    </ol>
+
+    <div class="callout tip"><strong>Habit worth keeping.</strong> Bind workflow nodes to task types, not models. Workflows stay portable across projects and teams; the matrix is where model opinions live.</div>
+
+    <h2>Where to go next</h2>
+    <ul>
+      <li><a href="mrgd-tuning.html">MRGD tuning</a> — the <code>reward-scoring</code> row routes your reward models too.</li>
+      <li><a href="first-workflow.html">Your first real workflow</a> — see routing decisions live in a run.</li>
+    </ul>
+  </main>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <a class="logo" href="../index.html" style="font-size:1.05rem"><img src="../assets/img/logo.svg" alt="" width="20" height="20">Maestro IDE</a>
+      <p style="margin-top:10px; max-width:340px">A cross-platform AI studio for orchestrating multi-agent systems.</p>
+    </div>
+    <div class="cols">
+      <div class="col"><span class="h">Learn</span><a href="index.html">All guides</a><a href="../faq.html">FAQ</a></div>
+      <div class="col"><span class="h">Product</span><a href="../features.html">Features</a><a href="../index.html#roadmap">Roadmap</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Features — Maestro IDE</title>
+<meta name="description" content="A full tour of Maestro IDE: the visual canvas, live agent map, routing matrix, MRGD reward-guided decoding, observability, memory, skills, rooms, gateway, and more.">
+<link rel="icon" type="image/svg+xml" href="assets/img/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="index.html"><img src="assets/img/logo.svg" alt="" width="26" height="26">Maestro IDE</a>
+    <div class="nav-links">
+      <a href="features.html">Features</a>
+      <a href="how-to/index.html">How-to</a>
+      <a href="faq.html">FAQ</a>
+      <a href="index.html#roadmap">Roadmap</a>
+      <a class="btn-gh" href="https://github.com/mosesmarimo/maestro-website">GitHub</a>
+    </div>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow">The full tour</p>
+    <h1>Every feature, movement by movement.</h1>
+    <p class="lede">Maestro is built against a public blueprint in two phases: the orchestration IDE, then the agent platform layer. Everything below is in that blueprint — labeled <span class="badge badge-now">Available</span> or <span class="badge badge-dev">In development</span> so you always know what ships today.</p>
+  </div>
+</header>
+
+<!-- Canvas -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Compose <span class="dot">·</span> Phase 1 <span class="badge badge-now">Available</span></p>
+      <h2>The canvas is the score.</h2>
+      <p class="lede">Drag components from the palette — agents, model calls, routers, prompt templates, tools, conditions, loops, human approvals, MRGD decode, reward models, sub-workflows — and wire them with typed edges. Text ports don't accept images; incompatible connections are refused on the spot, with the reason. A Problems panel catches unresolved references, cycles, and missing config before anything runs.</p>
+    </div>
+    <figure class="shotfig reveal">
+      <div class="frame"><img src="assets/img/shot-canvas.svg" alt="Maestro canvas: a captioning workflow running, with agent badges on active nodes, a component tree, and a streaming run log"></div>
+      <figcaption>A run in flight: pulsing nodes, animated edges, agent badges in both the canvas and the tree, and a routing decision explained in the log.</figcaption>
+    </figure>
+    <div class="pillars" style="margin-top:36px">
+      <div class="pillar reveal"><h3>Live agent map</h3><p>Each active agent carries a colored badge — violet thinking, cyan calling a model, amber waiting on a tool, orange waiting on you. With three agents running in parallel, you can say where each one is within two seconds. That's an acceptance criterion, not a slogan.</p></div>
+      <div class="pillar reveal"><h3>Canvas ⇄ JSON, always in sync</h3><p>Every workflow is a readable JSON file that git can diff. Edit on the canvas or in the built-in editor — both views are the same document, and invalid JSON is rejected with precise errors.</p></div>
+      <div class="pillar reveal"><h3>Sub-workflows &amp; frames</h3><p>Group nodes into collapsible frames, convert them into reusable sub-workflows, and compose systems from systems. Undo covers at least a hundred steps.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Models & routing -->
+<section class="section alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Route <span class="dot">·</span> Phase 1 <span class="badge badge-now">Available</span></p>
+      <h2>Unlimited models. One matrix.</h2>
+      <p class="lede">Register as many models as you like — hosted or local — and let the routing matrix decide which one handles each kind of task. Rules carry conditions (minimum context, cost tier, tags like <code>local-only</code> or <code>eu-region</code>) and ordered fallback chains that take over automatically when a provider fails.</p>
+    </div>
+    <figure class="shotfig reveal">
+      <div class="frame"><img src="assets/img/shot-routing.svg" alt="Routing matrix: rules for text, code, image, video, TTS, STT and reward scoring, with a test console explaining a decision"></div>
+      <figcaption>The test console answers "which model would handle this?" — without spending a cent.</figcaption>
+    </figure>
+    <div class="pillars" style="margin-top:36px">
+      <div class="pillar reveal"><h3>Any provider</h3><p>Anthropic, OpenAI-compatible endpoints (OpenAI, Azure, Groq, Together, OpenRouter, vLLM, LM Studio…), Gemini, Ollama, ElevenLabs, Stability-style image backends — and a generic HTTP adapter for anything else, no code required.</p></div>
+      <div class="pillar reveal"><h3>Keys stay in the keychain</h3><p>Credentials are entered once and stored only in your OS keychain. Project files, exports, and logs carry an opaque reference — never the key. Test any model's connection with one click.</p></div>
+      <div class="pillar reveal"><h3>Cost-aware failover</h3><p>Prefer the cheapest eligible model, or pin quality where it matters. Every failover is logged and shown — you always know which model actually answered.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- MRGD -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Decode <span class="dot">·</span> Phase 1 <span class="badge badge-dev">In development</span></p>
+      <h2>MRGD: quality you can steer at run time.</h2>
+      <p class="lede">Maestro implements multimodal reward-guided decoding from the ICCV 2025 paper <a href="https://arxiv.org/abs/2508.11616">"Controlling Multimodal LLMs via Reward-guided Decoding"</a>. Enable it on any generation node: the engine samples k candidate continuations every sentence, scores each with your weighted mix of reward models, keeps the best, and repeats. In the paper's benchmarks this cut hallucinated objects by ~70% versus greedy decoding — and k=5 with sentence-level guidance beat best-of-30 rejection sampling.</p>
+    </div>
+    <figure class="shotfig reveal">
+      <div class="frame"><img src="assets/img/shot-mrgd.svg" alt="MRGD inspector: five candidates with per-reward score bars, the selected candidate highlighted, and a runtime weight slider"></div>
+      <figcaption>Four scorer types: learned reward endpoints, programmatic object-recall, LLM-as-judge, and your own scripts.</figcaption>
+    </figure>
+    <div class="pillars" style="margin-top:36px">
+      <div class="pillar reveal"><h3>Presets you can trust</h3><p>Precision (w=1.0), Balanced (w=0.5), Recall (w=0.0) — with honest guidance that the best weight depends on your content, and A/B runs to find it.</p></div>
+      <div class="pillar reveal"><h3>Costs declared up front</h3><p>MRGD multiplies generation cost by roughly k. Maestro estimates it before you run and reports actuals after — the trade-off is always yours to make.</p></div>
+      <div class="pillar reveal"><h3>Best-of-k for media</h3><p>The same idea extends to images and audio: generate k artifacts, score each with a judge you choose, keep the winner, inspect the alternates. Clearly labeled as Maestro's extension of the paper.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Observe -->
+<section class="section alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Observe <span class="dot">·</span> Phase 1 <span class="badge badge-dev">In development</span></p>
+      <h2>Runs you can replay. Spend you can see.</h2>
+      <p class="lede">Every run writes an append-only event log — prompts, responses, tool calls, routing decisions, reward scores, costs. Scrub through any historical run step by step, open any node's inputs and outputs, and read the Gantt timeline to see what ran in parallel, what retried, and what failed over.</p>
+    </div>
+    <div class="split">
+      <figure class="shotfig reveal">
+        <div class="frame"><img src="assets/img/shot-dashboard.svg" alt="Dashboard: 30-day stacked spend by task type, model distribution, cache hit rate, budgets and alerts" loading="lazy"></div>
+        <figcaption>Spend by model, provider, workflow, task type, and agent — with cache hit rates and 30-day trends.</figcaption>
+      </figure>
+      <figure class="shotfig reveal">
+        <div class="frame"><img src="assets/img/shot-deps.svg" alt="Dependency graph highlighting what breaks if a model is deleted" loading="lazy"></div>
+        <figcaption>"What breaks if I delete this?" — answered before you delete it.</figcaption>
+      </figure>
+    </div>
+    <div class="pillars" style="margin-top:36px">
+      <div class="pillar reveal"><h3>Budgets that pause, not surprise</h3><p>Token, cost, and time budgets per agent and per run. On breach, the run pauses at a safe point and asks — overruns are never silent.</p></div>
+      <div class="pillar reveal"><h3>Outbound transparency</h3><p>A per-run list of every external endpoint contacted, with payload sizes. Local-only setups make zero non-provider network calls.</p></div>
+      <div class="pillar reveal"><h3>Alerts</h3><p>Set thresholds on run cost, error rate, or latency and get notified in the app — and, once the gateway lands, on any channel you've connected.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Agent platform -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">The agent platform <span class="dot">·</span> Phase 2 <span class="badge badge-dev">In development</span></p>
+      <h2>From IDE to companion.</h2>
+      <p class="lede">Phase 2 adds the layer that makes agents feel less like scripts and more like colleagues — specified in the same public blueprint, built in the same staged way.</p>
+    </div>
+    <div class="split">
+      <figure class="shotfig reveal">
+        <div class="frame"><img src="assets/img/shot-memory.svg" alt="Memory entries with edit controls, cross-session recall search, and a skills review queue" loading="lazy"></div>
+        <figcaption>Memory &amp; skills — transparent, file-based, human-approved.</figcaption>
+      </figure>
+      <figure class="shotfig reveal">
+        <div class="frame"><img src="assets/img/shot-rooms.svg" alt="Multi-agent room with researcher, writer and critic collaborating under moderator routing" loading="lazy"></div>
+        <figcaption>Rooms — collaborative conversations that can become workflows.</figcaption>
+      </figure>
+    </div>
+    <div class="fgrid" style="margin-top:36px">
+      <div class="fcard reveal"><h3>Persistent memory</h3><p>Agents remember preferences, project context, and your environment across sessions. Entries are plain files — visible, editable, deletable, versionable. Full-text recall over every past session, summarized with sources.</p></div>
+      <div class="fcard reveal"><h3>Skills with an approval gate</h3><p>After a hard task succeeds, the agent drafts a reusable SKILL.md (agentskills.io-compatible). You review and approve before it ever activates. Skills version themselves and propose their own improvements — as diffs, for you to accept.</p></div>
+      <div class="fcard reveal"><h3>Multi-agent rooms</h3><p>@mention a specific agent or let a moderator route. Shared context compresses automatically when it outgrows the smallest model's window — losslessly, with the originals kept in the event log.</p></div>
+      <div class="fcard reveal"><h3>Messaging gateway</h3><p>Telegram, Discord, and Slack first; Matrix and more behind a documented bridge contract. Pairing codes gate access; voice memos are transcribed through your STT route; conversations continue across surfaces.</p></div>
+      <div class="fcard reveal"><h3>Schedules &amp; headless service</h3><p>Describe a schedule in plain language, confirm the parsed cron, pick a delivery channel. The background service runs it — and honors the same budgets, sandbox, and approval rules as the IDE.</p></div>
+      <div class="fcard reveal"><h3>Execution backends</h3><p>Local, hardened Docker (read-only root, dropped capabilities, no network unless granted), SSH remotes, and cloud sandboxes — selectable per project, overridable per node, logged per tool call. Plus a file browser over all of them.</p></div>
+      <div class="fcard reveal"><h3>Browser &amp; web tools</h3><p>Search, extract pages to clean markdown, and drive a real browser — navigate, click, type, screenshot — with vision analysis closing the loop and hard rules against touching credentials or payment fields.</p></div>
+      <div class="fcard reveal"><h3>Chat surface, voice in and out</h3><p>A first-class chat panel with streaming tool traces, interrupt-and-redirect, and <code>/model</code> switching mid-conversation. Speak to your agents and let them answer aloud — through whichever STT and TTS models your matrix routes to.</p></div>
+      <div class="fcard reveal"><h3>Profiles, accounts &amp; web console</h3><p>A self-hosted service with real accounts, roles, and isolated profiles — plus a browser console for chat, runs, jobs, files, and dashboards. No default passwords, localhost by default, TLS for anything wider.</p></div>
+      <div class="fcard reveal"><h3>Trajectory export</h3><p>Batch-run a workflow over a dataset and export the tool-call trajectories as ShareGPT or JSONL, curated by outcome or reward score. Your best runs become training data for your next model.</p></div>
+      <div class="fcard reveal"><h3>MCP integration</h3><p>Attach any Model Context Protocol server — stdio or HTTP — and its tools join your agents' toolboxes under the same allowlists, sandbox, and approval policies.</p></div>
+      <div class="fcard reveal"><h3>CLI</h3><p>The same core, headless: <code>maestro chat</code>, <code>maestro run</code>, <code>maestro jobs</code>, <code>maestro doctor</code>. One service, one event log, many surfaces.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band alt section">
+  <div class="wrap reveal">
+    <h2>See it in practice.</h2>
+    <p class="lede" style="text-align:center; margin-bottom:30px">The how-to guides walk through each of these, step by step.</p>
+    <div class="hero-cta" style="justify-content:center">
+      <a class="btn btn-primary" href="how-to/index.html">Browse the guides</a>
+      <a class="btn btn-ghost" href="faq.html">Read the FAQ</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <a class="logo" href="index.html" style="font-size:1.05rem"><img src="assets/img/logo.svg" alt="" width="20" height="20">Maestro IDE</a>
+      <p style="margin-top:10px; max-width:340px">A cross-platform AI studio for orchestrating multi-agent systems. Built in Rust. Self-hosted. Zero telemetry by default.</p>
+      <p style="margin-top:14px; font-size:0.78rem">Interface previews on this site are rendered from the Maestro design specification (MSTRO-SPEC-001).</p>
+    </div>
+    <div class="cols">
+      <div class="col">
+        <span class="h">Product</span>
+        <a href="features.html">Features</a>
+        <a href="index.html#roadmap">Roadmap</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <div class="col">
+        <span class="h">Learn</span>
+        <a href="how-to/getting-started.html">Getting started</a>
+        <a href="how-to/index.html">All guides</a>
+        <a href="https://arxiv.org/abs/2508.11616">MRGD paper</a>
+      </div>
+      <div class="col">
+        <span class="h">Project</span>
+        <a href="https://github.com/mosesmarimo/maestro-website">Website source</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js"></script>
+</body>
+</html>

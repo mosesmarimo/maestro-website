@@ -1,0 +1,72 @@
+<svg viewBox="0 0 1280 800" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, 'Segoe UI', sans-serif" role="img" aria-label="Maestro IDE MRGD inspector">
+  <rect width="1280" height="800" rx="14" fill="#0d1120"/>
+  <rect x="0" y="0" width="1280" height="42" rx="14" fill="#131829"/>
+  <rect x="0" y="28" width="1280" height="14" fill="#131829"/>
+  <circle cx="24" cy="21" r="6" fill="#e86a8a"/><circle cx="44" cy="21" r="6" fill="#f2b75c"/><circle cx="64" cy="21" r="6" fill="#5fd3a2"/>
+  <text x="640" y="26" text-anchor="middle" fill="#98a0b8" font-size="12.5">MRGD inspector — run #128 · node mrgd-decode · Maestro IDE</text>
+
+  <text x="48" y="94" fill="#f2efe7" font-size="24" font-weight="650">MRGD inspector</text>
+  <text x="48" y="120" fill="#98a0b8" font-size="13">Round 3 of 7 · k=5 candidates · T=1 sentence · s = <tspan fill="#8b7cf7">0.75</tspan>·r_hal + <tspan fill="#4fc3e8">0.25</tspan>·r_rec · preset: precision</text>
+
+  <!-- rounds strip -->
+  <g font-family="ui-monospace, Menlo, monospace" font-size="11.5">
+    <rect x="48" y="140" width="72" height="30" rx="15" fill="#1a2036"/><text x="84" y="159" text-anchor="middle" fill="#5fd3a2">R1 ✓</text>
+    <rect x="130" y="140" width="72" height="30" rx="15" fill="#1a2036"/><text x="166" y="159" text-anchor="middle" fill="#5fd3a2">R2 ✓</text>
+    <rect x="212" y="140" width="72" height="30" rx="15" fill="#8b7cf7"/><text x="248" y="159" text-anchor="middle" fill="#0d0a1f" font-weight="700">R3 ●</text>
+    <rect x="294" y="140" width="72" height="30" rx="15" fill="#131829" stroke="#232a44"/><text x="330" y="159" text-anchor="middle" fill="#5c6480">R4</text>
+    <rect x="376" y="140" width="72" height="30" rx="15" fill="#131829" stroke="#232a44"/><text x="412" y="159" text-anchor="middle" fill="#5c6480">R5</text>
+  </g>
+
+  <!-- candidates -->
+  <g>
+    <!-- candidate 1 -->
+    <rect x="48" y="196" width="1184" height="92" rx="10" fill="#131829" stroke="#232a44"/>
+    <text x="70" y="224" fill="#5c6480" font-size="10.5" font-family="ui-monospace, Menlo, monospace">CANDIDATE 1</text>
+    <text x="70" y="250" fill="#c6cadb" font-size="13">"A black otter rests on the grass beside two orange frisbees."</text>
+    <rect x="70" y="264" width="360" height="8" rx="4" fill="#1a2036"/><rect x="70" y="264" width="328" height="8" rx="4" fill="#8b7cf7"/>
+    <text x="444" y="272" fill="#8b7cf7" font-size="11" font-family="ui-monospace, Menlo, monospace">r_hal 0.91</text>
+    <rect x="560" y="264" width="360" height="8" rx="4" fill="#1a2036"/><rect x="560" y="264" width="252" height="8" rx="4" fill="#4fc3e8"/>
+    <text x="934" y="272" fill="#4fc3e8" font-size="11" font-family="ui-monospace, Menlo, monospace">r_rec 0.70</text>
+    <text x="1160" y="250" fill="#f2efe7" font-size="16" font-weight="700" font-family="ui-monospace, Menlo, monospace">0.86</text>
+
+    <!-- candidate 2 — selected -->
+    <rect x="48" y="300" width="1184" height="92" rx="10" fill="#171331" stroke="#8b7cf7" stroke-width="2"/>
+    <text x="70" y="328" fill="#8b7cf7" font-size="10.5" font-family="ui-monospace, Menlo, monospace">CANDIDATE 2 — SELECTED ✓</text>
+    <text x="70" y="354" fill="#f2efe7" font-size="13">"A black otter lies on the grass, a frisbee resting near its front paws."</text>
+    <rect x="70" y="368" width="360" height="8" rx="4" fill="#1a2036"/><rect x="70" y="368" width="335" height="8" rx="4" fill="#8b7cf7"/>
+    <text x="444" y="376" fill="#8b7cf7" font-size="11" font-family="ui-monospace, Menlo, monospace">r_hal 0.93</text>
+    <rect x="560" y="368" width="360" height="8" rx="4" fill="#1a2036"/><rect x="560" y="368" width="266" height="8" rx="4" fill="#4fc3e8"/>
+    <text x="934" y="376" fill="#4fc3e8" font-size="11" font-family="ui-monospace, Menlo, monospace">r_rec 0.74</text>
+    <text x="1160" y="354" fill="#5fd3a2" font-size="16" font-weight="700" font-family="ui-monospace, Menlo, monospace">0.87</text>
+
+    <!-- candidate 3 -->
+    <rect x="48" y="404" width="1184" height="92" rx="10" fill="#131829" stroke="#232a44"/>
+    <text x="70" y="432" fill="#5c6480" font-size="10.5" font-family="ui-monospace, Menlo, monospace">CANDIDATE 3</text>
+    <text x="70" y="458" fill="#c6cadb" font-size="13">"A brown bear sits in a park with several frisbees and a small boat."</text>
+    <rect x="70" y="472" width="360" height="8" rx="4" fill="#1a2036"/><rect x="70" y="472" width="130" height="8" rx="4" fill="#e86a8a"/>
+    <text x="444" y="480" fill="#e86a8a" font-size="11" font-family="ui-monospace, Menlo, monospace">r_hal 0.36</text>
+    <rect x="560" y="472" width="360" height="8" rx="4" fill="#1a2036"/><rect x="560" y="472" width="295" height="8" rx="4" fill="#4fc3e8"/>
+    <text x="934" y="480" fill="#4fc3e8" font-size="11" font-family="ui-monospace, Menlo, monospace">r_rec 0.82</text>
+    <text x="1160" y="458" fill="#98a0b8" font-size="16" font-weight="700" font-family="ui-monospace, Menlo, monospace">0.48</text>
+
+    <!-- candidate 4 -->
+    <rect x="48" y="508" width="1184" height="92" rx="10" fill="#131829" stroke="#232a44"/>
+    <text x="70" y="536" fill="#5c6480" font-size="10.5" font-family="ui-monospace, Menlo, monospace">CANDIDATE 4</text>
+    <text x="70" y="562" fill="#c6cadb" font-size="13">"An otter on grass; nearby, a disc and its shadow."</text>
+    <rect x="70" y="576" width="360" height="8" rx="4" fill="#1a2036"/><rect x="70" y="576" width="306" height="8" rx="4" fill="#8b7cf7"/>
+    <text x="444" y="584" fill="#8b7cf7" font-size="11" font-family="ui-monospace, Menlo, monospace">r_hal 0.85</text>
+    <rect x="560" y="576" width="360" height="8" rx="4" fill="#1a2036"/><rect x="560" y="576" width="205" height="8" rx="4" fill="#4fc3e8"/>
+    <text x="934" y="584" fill="#4fc3e8" font-size="11" font-family="ui-monospace, Menlo, monospace">r_rec 0.57</text>
+    <text x="1160" y="562" fill="#98a0b8" font-size="16" font-weight="700" font-family="ui-monospace, Menlo, monospace">0.78</text>
+  </g>
+
+  <!-- footer stats -->
+  <rect x="48" y="622" width="1184" height="144" rx="10" fill="#0a0d18" stroke="#232a44"/>
+  <text x="70" y="652" fill="#5c6480" font-size="10.5" letter-spacing="2" font-family="ui-monospace, Menlo, monospace">RUN COST · MRGD MULTIPLIER</text>
+  <text x="70" y="684" fill="#c6cadb" font-size="13">Estimated before run: <tspan fill="#f2efe7" font-weight="700">$0.19</tspan> (~5.2× base sampling) · Actual so far: <tspan fill="#5fd3a2" font-weight="700">$0.11</tspan></text>
+  <text x="70" y="712" fill="#c6cadb" font-size="13">Adjust weights live — no retraining, no redeploy. Drag w toward precision or recall between runs.</text>
+  <rect x="70" y="728" width="500" height="8" rx="4" fill="#1a2036"/>
+  <rect x="70" y="728" width="375" height="8" rx="4" fill="#8b7cf7"/>
+  <circle cx="445" cy="732" r="9" fill="#f2efe7"/>
+  <text x="590" y="738" fill="#98a0b8" font-size="11.5" font-family="ui-monospace, Menlo, monospace">w = 0.75 · precision ◂──▸ recall</text>
+</svg>

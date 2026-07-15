@@ -1,0 +1,108 @@
+<svg viewBox="0 0 1280 800" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, 'Segoe UI', sans-serif" role="img" aria-label="Maestro IDE canvas with live agent map">
+  <defs>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.2" fill="#1a2036"/>
+    </pattern>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#3d4668"/>
+    </marker>
+  </defs>
+
+  <rect width="1280" height="800" rx="14" fill="#0d1120"/>
+  <!-- title bar -->
+  <rect x="0" y="0" width="1280" height="42" rx="14" fill="#131829"/>
+  <rect x="0" y="28" width="1280" height="14" fill="#131829"/>
+  <circle cx="24" cy="21" r="6" fill="#e86a8a"/><circle cx="44" cy="21" r="6" fill="#f2b75c"/><circle cx="64" cy="21" r="6" fill="#5fd3a2"/>
+  <text x="640" y="26" text-anchor="middle" fill="#98a0b8" font-size="12.5">caption-studio — research-review.workflow · Maestro IDE</text>
+  <text x="1150" y="26" fill="#5fd3a2" font-size="11.5" font-family="ui-monospace, Menlo, monospace">● RUN #128 LIVE</text>
+
+  <!-- left: component tree -->
+  <rect x="0" y="42" width="232" height="758" fill="#10141f"/>
+  <line x1="232" y1="42" x2="232" y2="800" stroke="#232a44"/>
+  <text x="18" y="72" fill="#5c6480" font-size="10.5" letter-spacing="2" font-family="ui-monospace, Menlo, monospace">COMPONENT TREE</text>
+  <text x="18" y="100" fill="#f2efe7" font-size="12.5">▾ caption-studio</text>
+  <text x="30" y="126" fill="#98a0b8" font-size="12.5">▾ research-review</text>
+  <text x="44" y="152" fill="#98a0b8" font-size="12.5">input · brief</text>
+  <text x="44" y="178" fill="#f2efe7" font-size="12.5">agent · researcher</text>
+  <circle cx="205" cy="174" r="6" fill="#4fc3e8"/>
+  <text x="44" y="204" fill="#f2efe7" font-size="12.5">agent · writer</text>
+  <circle cx="205" cy="200" r="6" fill="#8b7cf7"/>
+  <text x="44" y="230" fill="#98a0b8" font-size="12.5">router · by task type</text>
+  <text x="44" y="256" fill="#f2efe7" font-size="12.5">mrgd · decode</text>
+  <circle cx="205" cy="252" r="6" fill="#f2b75c"/>
+  <text x="44" y="282" fill="#98a0b8" font-size="12.5">output · caption</text>
+  <text x="30" y="316" fill="#98a0b8" font-size="12.5">▸ media-pipeline</text>
+  <text x="18" y="350" fill="#5c6480" font-size="10.5" letter-spacing="2" font-family="ui-monospace, Menlo, monospace">MODELS · 14</text>
+  <text x="18" y="378" fill="#98a0b8" font-size="12">claude-sonnet-5</text>
+  <text x="18" y="402" fill="#98a0b8" font-size="12">llava-1.5 · local</text>
+  <text x="18" y="426" fill="#98a0b8" font-size="12">sdxl-turbo · local</text>
+  <text x="18" y="450" fill="#98a0b8" font-size="12">eleven-tts-v3</text>
+
+  <!-- agents legend bottom of tree -->
+  <rect x="14" y="690" width="204" height="96" rx="9" fill="#131829" stroke="#232a44"/>
+  <text x="28" y="714" fill="#5c6480" font-size="10" letter-spacing="2" font-family="ui-monospace, Menlo, monospace">ACTIVE AGENTS</text>
+  <circle cx="34" cy="734" r="6" fill="#4fc3e8"/><text x="48" y="738" fill="#c6cadb" font-size="11.5">researcher — calling model</text>
+  <circle cx="34" cy="756" r="6" fill="#8b7cf7"/><text x="48" y="760" fill="#c6cadb" font-size="11.5">writer — thinking</text>
+  <circle cx="34" cy="778" r="6" fill="#f2b75c"/><text x="48" y="782" fill="#c6cadb" font-size="11.5">critic — waiting on tool</text>
+
+  <!-- canvas -->
+  <rect x="232" y="42" width="1048" height="618" fill="url(#dots)"/>
+
+  <!-- edges -->
+  <path d="M418 330 C 470 330, 480 240, 532 240" stroke="#3d4668" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+  <path d="M418 330 C 470 330, 480 420, 532 420" stroke="#3d4668" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+  <path d="M718 240 C 770 240, 780 320, 830 322" stroke="#8b7cf7" stroke-width="2.2" fill="none" marker-end="url(#arr)" stroke-dasharray="6 7"/>
+  <path d="M718 420 C 770 420, 780 340, 830 338" stroke="#3d4668" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+  <path d="M1016 330 C 1050 330, 1056 330, 1088 330" stroke="#3d4668" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+
+  <!-- node: input -->
+  <rect x="300" y="300" width="118" height="60" rx="10" fill="#131829" stroke="#232a44" stroke-width="1.5"/>
+  <text x="359" y="326" text-anchor="middle" fill="#98a0b8" font-size="10" letter-spacing="1.5" font-family="ui-monospace, Menlo, monospace">INPUT</text>
+  <text x="359" y="346" text-anchor="middle" fill="#f2efe7" font-size="13">brief + image</text>
+  <circle cx="418" cy="330" r="5" fill="#4fc3e8"/>
+
+  <!-- node: agent researcher (active) -->
+  <rect x="532" y="204" width="186" height="72" rx="10" fill="#131829" stroke="#4fc3e8" stroke-width="2"/>
+  <text x="548" y="230" fill="#98a0b8" font-size="10" letter-spacing="1.5" font-family="ui-monospace, Menlo, monospace">AGENT</text>
+  <text x="548" y="252" fill="#f2efe7" font-size="13.5">researcher</text>
+  <text x="548" y="268" fill="#5c6480" font-size="10.5" font-family="ui-monospace, Menlo, monospace">route: text-generation</text>
+  <circle cx="700" cy="222" r="9" fill="#4fc3e8"/><text x="700" y="226" text-anchor="middle" fill="#0d1120" font-size="10" font-weight="700">R</text>
+  <circle cx="532" cy="240" r="5" fill="#4fc3e8"/><circle cx="718" cy="240" r="5" fill="#8b7cf7"/>
+
+  <!-- node: agent writer -->
+  <rect x="532" y="384" width="186" height="72" rx="10" fill="#131829" stroke="#8b7cf7" stroke-width="2"/>
+  <text x="548" y="410" fill="#98a0b8" font-size="10" letter-spacing="1.5" font-family="ui-monospace, Menlo, monospace">AGENT</text>
+  <text x="548" y="432" fill="#f2efe7" font-size="13.5">writer</text>
+  <text x="548" y="448" fill="#5c6480" font-size="10.5" font-family="ui-monospace, Menlo, monospace">model: claude-sonnet-5</text>
+  <circle cx="700" cy="402" r="9" fill="#8b7cf7"/><text x="700" y="406" text-anchor="middle" fill="#0d1120" font-size="10" font-weight="700">W</text>
+  <circle cx="532" cy="420" r="5" fill="#4fc3e8"/><circle cx="718" cy="420" r="5" fill="#8b7cf7"/>
+
+  <!-- node: MRGD decode -->
+  <rect x="830" y="292" width="186" height="76" rx="10" fill="#171331" stroke="#8b7cf7" stroke-width="2"/>
+  <text x="846" y="318" fill="#8b7cf7" font-size="10" letter-spacing="1.5" font-family="ui-monospace, Menlo, monospace">MRGD DECODE</text>
+  <text x="846" y="340" fill="#f2efe7" font-size="13.5">k=5 · T=1 · w=0.75</text>
+  <text x="846" y="356" fill="#5c6480" font-size="10.5" font-family="ui-monospace, Menlo, monospace">preset: precision</text>
+  <circle cx="830" cy="330" r="5" fill="#8b7cf7"/><circle cx="1016" cy="330" r="5" fill="#5fd3a2"/>
+
+  <!-- node: output -->
+  <rect x="1088" y="300" width="118" height="60" rx="10" fill="#131829" stroke="#232a44" stroke-width="1.5"/>
+  <text x="1147" y="326" text-anchor="middle" fill="#98a0b8" font-size="10" letter-spacing="1.5" font-family="ui-monospace, Menlo, monospace">OUTPUT</text>
+  <text x="1147" y="346" text-anchor="middle" fill="#f2efe7" font-size="13">caption</text>
+
+  <!-- minimap -->
+  <rect x="1076" y="560" width="180" height="84" rx="8" fill="#131829" stroke="#232a44"/>
+  <rect x="1090" y="580" width="20" height="10" rx="2" fill="#3d4668"/>
+  <rect x="1122" y="570" width="26" height="10" rx="2" fill="#4fc3e8" opacity="0.7"/>
+  <rect x="1122" y="592" width="26" height="10" rx="2" fill="#8b7cf7" opacity="0.7"/>
+  <rect x="1158" y="580" width="26" height="10" rx="2" fill="#8b7cf7"/>
+  <rect x="1194" y="580" width="20" height="10" rx="2" fill="#3d4668"/>
+
+  <!-- bottom console -->
+  <rect x="232" y="660" width="1048" height="140" fill="#0a0d18"/>
+  <line x1="232" y1="660" x2="1280" y2="660" stroke="#232a44"/>
+  <text x="252" y="686" fill="#5c6480" font-size="10.5" letter-spacing="2" font-family="ui-monospace, Menlo, monospace">RUN LOG · #128</text>
+  <text x="252" y="712" fill="#4fc3e8" font-size="11.5" font-family="ui-monospace, Menlo, monospace">12:04:11 routing → text-generation matched rule 2 → claude-sonnet-5 (context ≥ 32k, tag eu-region)</text>
+  <text x="252" y="734" fill="#98a0b8" font-size="11.5" font-family="ui-monospace, Menlo, monospace">12:04:12 researcher · calling model · streaming 412 tok/s</text>
+  <text x="252" y="756" fill="#8b7cf7" font-size="11.5" font-family="ui-monospace, Menlo, monospace">12:04:14 mrgd · round 3 · candidate 2 selected · s=0.87 (r_hal 0.91 · r_rec 0.74)</text>
+  <text x="252" y="778" fill="#f2b75c" font-size="11.5" font-family="ui-monospace, Menlo, monospace">12:04:15 critic · waiting on tool web_extract (2.1s)</text>
+</svg>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skills &amp; memory — Maestro IDE guides</title>
+<meta name="description" content="How Maestro agents remember across sessions and write their own skills — and how you stay in control: memory scopes, cross-session recall, the skill approval queue, and versioned self-improvement.">
+<link rel="icon" type="image/svg+xml" href="../assets/img/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="../index.html"><img src="../assets/img/logo.svg" alt="" width="26" height="26">Maestro IDE</a>
+    <div class="nav-links">
+      <a href="../features.html">Features</a>
+      <a href="index.html" class="active">How-to</a>
+      <a href="../faq.html">FAQ</a>
+      <a href="../index.html#roadmap">Roadmap</a>
+      <a class="btn-gh" href="https://github.com/mosesmarimo/maestro-website">GitHub</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap docs">
+  <aside class="docs-side">
+    <div class="group">Start here</div>
+    <a href="getting-started.html">Getting started</a>
+    <a href="first-workflow.html">Your first real workflow</a>
+    <div class="group">Core</div>
+    <a href="routing-matrix.html">The routing matrix</a>
+    <a href="mrgd-tuning.html">MRGD tuning</a>
+    <div class="group">Agent platform</div>
+    <a href="telegram-agent.html">Agents on Telegram</a>
+    <a href="skills-memory.html" class="active">Skills &amp; memory</a>
+  </aside>
+
+  <main class="docs-main">
+    <p class="eyebrow">Agent platform · about 20 minutes <span class="badge badge-dev">In development — Phase 2, learning stage</span></p>
+    <h1>Skills &amp; memory</h1>
+    <p class="lede">Two halves of one loop: memory makes agents know <em>you</em>; skills make them keep <em>what they learned</em>. Both are transparent files, and both keep you in charge.</p>
+
+    <div class="callout"><strong>This feature is in development.</strong> Everything below is specified in the Maestro blueprint (UR-1300/UR-1400) — including the safety gates — and describes how it will work when the learning stage ships.</div>
+
+    <figure class="shotfig">
+      <div class="frame"><img src="../assets/img/shot-memory.svg" alt="Memory panel and skills review queue"></div>
+      <figcaption>Left: memory entries with edit and history controls. Right: the skills queue, with a draft awaiting your approval.</figcaption>
+    </figure>
+
+    <h2>Memory: what agents remember</h2>
+    <p>Agents write durable notes as they work — your preferences, project conventions, environment facts — and read them back in every later session. Memory is scoped:</p>
+    <ul>
+      <li><strong>Global</strong> — true everywhere ("prefers TypeScript examples").</li>
+      <li><strong>Project</strong> — conventions of one codebase or brand.</li>
+      <li><strong>Agent</strong> — one specialist's working notes.</li>
+      <li><strong>Profile</strong> — separated per operator when a service has several users.</li>
+    </ul>
+    <ol class="steps">
+      <li>Tell any agent something worth keeping: <em>"From now on, hero images are 3:2."</em> It stores a project-scope entry.</li>
+      <li>Open the <strong>Memory panel</strong>. Every entry is visible, editable, and deletable — no hidden state. Entries are markdown files on disk; version them if you like.</li>
+      <li>Restart Maestro and ask for a hero image. The 3:2 preference applies, unprompted.</li>
+    </ol>
+    <div class="callout tip"><strong>Curation is automatic but journaled.</strong> On a schedule, agents consolidate duplicates and prune stale entries. Every change lands in a reviewable journal with one-click undo.</div>
+
+    <h2>Recall: search everything you've ever discussed</h2>
+    <ol class="steps">
+      <li>Use the recall search — or let agents use it as a tool: <em>"What did we decide about the pricing page last month?"</em></li>
+      <li>Maestro full-text-searches all past sessions and runs, then summarizes the matches with links back to the exact sources.</li>
+    </ol>
+
+    <h2>Skills: solve it once</h2>
+    <p>A skill is a procedural document in the open <a href="https://agentskills.io">SKILL.md</a> format — instructions an agent loads on demand when a matching task appears. Maestro ships a curated library (git operations, diagramming, research, MLOps, media…) and, more interestingly, <strong>agents draft their own</strong>:</p>
+    <ol class="steps">
+      <li>Give an agent a genuinely hard multi-step task. When it succeeds, it writes up the method as a draft skill.</li>
+      <li>The draft appears in the <strong>review queue</strong> — inert. Read it like a pull request.</li>
+      <li><strong>Approve</strong> to add it to the library, or reject. Nothing an agent writes can activate itself. This gate is deliberate and non-negotiable.</li>
+      <li>Next time any agent with that skill enabled faces the task, it loads the skill and completes it in a fraction of the steps.</li>
+    </ol>
+
+    <h2>Self-improvement, as diffs</h2>
+    <ol class="steps">
+      <li>When a skill underperforms, the agent proposes an edit with a rationale — you see it as a versioned diff.</li>
+      <li>Accept or reject; roll back any version with one click. Skill history is kept forever.</li>
+    </ol>
+
+    <h2>Sharing skills</h2>
+    <ul>
+      <li>Export any skill as a portable bundle; import ones from the community — the format is agentskills.io-compatible.</li>
+      <li>Imports pass a <strong>static safety scan</strong> first: embedded shell commands, network calls, and suspicious payloads are surfaced before you can enable anything. Imported skills start disabled.</li>
+    </ul>
+
+    <h2>Where to go next</h2>
+    <ul>
+      <li><a href="telegram-agent.html">Agents on Telegram</a> — the same memory follows your agent to your phone.</li>
+      <li><a href="../features.html">Features</a> — how skills appear in the dependency graph and run logs.</li>
+    </ul>
+  </main>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <a class="logo" href="../index.html" style="font-size:1.05rem"><img src="../assets/img/logo.svg" alt="" width="20" height="20">Maestro IDE</a>
+      <p style="margin-top:10px; max-width:340px">A cross-platform AI studio for orchestrating multi-agent systems.</p>
+    </div>
+    <div class="cols">
+      <div class="col"><span class="h">Learn</span><a href="index.html">All guides</a><a href="../faq.html">FAQ</a></div>
+      <div class="col"><span class="h">Product</span><a href="../features.html">Features</a><a href="../index.html#roadmap">Roadmap</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/site.js"></script>
+</body>
+</html>
