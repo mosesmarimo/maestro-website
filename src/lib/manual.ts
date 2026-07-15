@@ -2,6 +2,17 @@ import fs from "node:fs";
 import path from "node:path";
 import { marked } from "marked";
 
+// The manual pages carry ~30 screenshots; lazy-load and async-decode them so
+// only above-the-fold images block first paint.
+marked.use({
+  renderer: {
+    image({ href, title, text }) {
+      const t = title ? ` title="${title}"` : "";
+      return `<img src="${href}" alt="${text}"${t} loading="lazy" decoding="async" />`;
+    },
+  },
+});
+
 // Loads the product manual from content/manual/*.md (synced from the
 // maestro-studio repo's docs/manual). Pages are fully static: files are read
 // at build time via generateStaticParams + force-static pages.
