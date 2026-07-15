@@ -78,9 +78,7 @@ export default function HomePage() {
       <JsonLd data={HOME_JSONLD} />
       <header className="hero">
         <div className="wrap">
-          <p className="eyebrow">
-            The AI agent orchestration studio <span className="dot">·</span> Windows · macOS · Linux
-          </p>
+          <p className="eyebrow">The AI agent orchestration studio</p>
           <h1>
             Stop guessing what
             <br />
