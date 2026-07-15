@@ -36,8 +36,7 @@ const DOWNLOADS: {
     arch: "Apple Silicon · macOS 12+",
     file: `Maestro-IDE_${VERSION}_aarch64.dmg`,
     kind: "Disk image (.dmg)",
-    note: "The Apple Silicon build is being produced now — it will appear here as soon as it's ready. Intel builds run on Apple Silicon via Rosetta in the meantime.",
-    comingSoon: true,
+    note: "Unsigned preview — on first open: right-click the app → Open, or allow it under System Settings → Privacy & Security.",
   },
   {
     platform: "macOS",
