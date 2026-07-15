@@ -5,7 +5,7 @@ import { GUIDES } from "@/lib/guides";
 export const metadata: Metadata = {
   title: "How-to guides",
   description:
-    "Step-by-step guides for Maestro IDE: getting started, building workflows, the routing matrix, MRGD tuning, agents on Telegram, and skills & memory.",
+    "Step-by-step guides for Maestro Studio: getting started, building workflows, the routing matrix, MRGD tuning, agents on Telegram, and skills & memory.",
 };
 
 export default function HowToIndex() {

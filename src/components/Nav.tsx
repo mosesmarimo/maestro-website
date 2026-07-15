@@ -18,7 +18,7 @@ export default function Nav() {
       <div className="nav-inner">
         <Link className="logo" href="/">
           <img src="/img/logo.svg" alt="" width={26} height={26} />
-          Maestro IDE
+          Maestro Studio
         </Link>
         <div className="nav-links">
           {LINKS.map((l) => (

@@ -4,7 +4,7 @@ export type FaqEntry = { question: string; answerHtml: string };
 // database is unreachable. Answers are HTML fragments (trusted, authored here).
 export const FAQ_SEED: FaqEntry[] = [
   {
-    question: "What exactly is Maestro IDE?",
+    question: "What exactly is Maestro Studio?",
     answerHtml:
       "<p>A desktop application for building, running, and observing multi-agent AI systems. You compose workflows visually on a canvas, register the models you want to use (any provider, hosted or local), define a routing matrix that sends each kind of task to the right model, and watch every agent work in real time on a live map of your system. It also implements MRGD — reward-guided decoding — as a quality dial on any generation step.</p>",
   },

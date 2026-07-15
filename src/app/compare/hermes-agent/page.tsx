@@ -3,15 +3,15 @@ import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Maestro IDE and Hermes Agent — how they relate and differ",
+  title: "Maestro Studio and Hermes Agent — how they relate and differ",
   description:
-    "An honest comparison of Maestro IDE with Hermes Agent (Nous Research) and Hermes Studio: shared capabilities like memory, skills, and messaging gateways — and where Maestro differs with a visual canvas, live agent map, model routing matrix, and MRGD decoding.",
+    "An honest comparison of Maestro Studio with Hermes Agent (Nous Research) and Hermes Studio: shared capabilities like memory, skills, and messaging gateways — and where Maestro differs with a visual canvas, live agent map, model routing matrix, and MRGD decoding.",
   keywords: [
     "Hermes Agent",
     "Hermes Agent alternative",
     "Hermes Studio",
     "Nous Research Hermes",
-    "Maestro IDE vs Hermes Agent",
+    "Maestro Studio vs Hermes Agent",
     "AI agent orchestration",
     "AI agent harness",
     "self-hosted AI agent",
@@ -20,9 +20,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/compare/hermes-agent" },
   openGraph: {
-    title: "Maestro IDE and Hermes Agent — how they relate and differ",
+    title: "Maestro Studio and Hermes Agent — how they relate and differ",
     description:
-      "Shared DNA, different instruments: what Maestro IDE openly adopts from Hermes Agent's capability set, and what it adds — visual orchestration, a live agent map, a routing matrix, and MRGD.",
+      "Shared DNA, different instruments: what Maestro Studio openly adopts from Hermes Agent's capability set, and what it adds — visual orchestration, a live agent map, a routing matrix, and MRGD.",
     url: "https://maestroide.com/compare/hermes-agent",
   },
 };
@@ -30,11 +30,11 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "TechArticle",
-  headline: "Maestro IDE and Hermes Agent — how they relate and differ",
+  headline: "Maestro Studio and Hermes Agent — how they relate and differ",
   description:
-    "A factual comparison of Maestro IDE with Hermes Agent (Nous Research) and Hermes Studio (EKKOLearnAI): shared capabilities, deliberate deviations, and the differences in interface, architecture, and availability.",
-  author: { "@type": "Organization", name: "Maestro IDE", url: "https://maestroide.com" },
-  publisher: { "@type": "Organization", name: "Maestro IDE", url: "https://maestroide.com" },
+    "A factual comparison of Maestro Studio with Hermes Agent (Nous Research) and Hermes Studio (EKKOLearnAI): shared capabilities, deliberate deviations, and the differences in interface, architecture, and availability.",
+  author: { "@type": "Organization", name: "Maestro Studio", url: "https://maestroide.com" },
+  publisher: { "@type": "Organization", name: "Maestro Studio", url: "https://maestroide.com" },
   mainEntityOfPage: "https://maestroide.com/compare/hermes-agent",
 };
 
@@ -59,7 +59,7 @@ export default function HermesComparePage() {
       <header className="page-hero">
         <div className="wrap">
           <p className="eyebrow">Comparison · written to be fair</p>
-          <h1>Maestro IDE and Hermes Agent</h1>
+          <h1>Maestro Studio and Hermes Agent</h1>
           <p className="lede">
             People searching for an AI agent harness usually meet both names. Here is the honest
             picture: what the two share, where they differ, and why Maestro&rsquo;s blueprint openly
@@ -80,7 +80,7 @@ export default function HermesComparePage() {
             adds a desktop and web console on top of it.
           </p>
           <p style={{ color: "var(--muted)", marginBottom: 12 }}>
-            <Link href="/">Maestro IDE</Link> is an AI agent orchestration studio built in Rust. Its
+            <Link href="/">Maestro Studio</Link> is an AI agent orchestration studio built in Rust. Its
             Phase-2 blueprint deliberately adopts the capability set Hermes proved people want —
             memory, skills, gateway, schedules, backends — and its public capability map traces
             every such feature to its source. The implementation is original; no code is shared.
@@ -104,7 +104,7 @@ export default function HermesComparePage() {
                 <tr>
                   <th style={{ textAlign: "left", padding: "10px 14px", borderBottom: "2px solid var(--accent)", color: "var(--ivory)" }}>Dimension</th>
                   <th style={{ textAlign: "left", padding: "10px 14px", borderBottom: "2px solid var(--accent)", color: "var(--ivory)" }}>Hermes Agent (+ Studio)</th>
-                  <th style={{ textAlign: "left", padding: "10px 14px", borderBottom: "2px solid var(--accent)", color: "var(--ivory)" }}>Maestro IDE</th>
+                  <th style={{ textAlign: "left", padding: "10px 14px", borderBottom: "2px solid var(--accent)", color: "var(--ivory)" }}>Maestro Studio</th>
                 </tr>
               </thead>
               <tbody>

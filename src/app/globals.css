@@ -1,12 +1,12 @@
 /* ============================================================
-   Maestro IDE — site design system
+   Maestro Studio — site design system
    Palette derived from the product's live agent-map legend:
    violet = thinking · cyan = calling model · amber = waiting
    green = done · rose = blocked/failed
    ============================================================ */
 
 :root {
-  /* Polished Pine — brand palette from the Maestro IDE brand guide (brand.md) */
+  /* Polished Pine — brand palette from the Maestro Studio brand guide (brand.md) */
   --pit: #03111e;          /* bg-base — navy field */
   --pit-deep: #020c16;
   --stage: #0b1f2e;        /* bg-elevated */

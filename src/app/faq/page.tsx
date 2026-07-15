@@ -8,7 +8,7 @@ const stripTags = (html: string) => html.replace(/<[^>]+>/g, " ").replace(/\s+/g
 export const metadata: Metadata = {
   title: "FAQ",
   description:
-    "Frequently asked questions about Maestro IDE: platforms, availability, models, MRGD, security, offline use, Phase 2, and more.",
+    "Frequently asked questions about Maestro Studio: platforms, availability, models, MRGD, security, offline use, Phase 2, and more.",
 };
 
 // FAQ content lives in PostgreSQL (seeded on first use) and re-renders

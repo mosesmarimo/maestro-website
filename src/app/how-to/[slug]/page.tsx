@@ -41,8 +41,8 @@ export default async function GuidePage({
         "@type": "TechArticle",
         headline: guide.title,
         description: guide.description,
-        author: { "@type": "Organization", name: "Maestro IDE", url: "https://maestroide.com" },
-        publisher: { "@type": "Organization", name: "Maestro IDE", url: "https://maestroide.com" },
+        author: { "@type": "Organization", name: "Maestro Studio", url: "https://maestroide.com" },
+        publisher: { "@type": "Organization", name: "Maestro Studio", url: "https://maestroide.com" },
         mainEntityOfPage: `https://maestroide.com/how-to/${guide.slug}`,
       },
       {

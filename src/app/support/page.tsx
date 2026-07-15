@@ -6,14 +6,14 @@ import JsonLd from "@/components/JsonLd";
 export const metadata: Metadata = {
   title: "Support",
   description:
-    "Get help with Maestro IDE: contact the support team through the form or email support@maestroide.com. Installation problems, bug reports, models and routing, MRGD questions.",
+    "Get help with Maestro Studio: contact the support team through the form or email support@maestroide.com. Installation problems, bug reports, models and routing, MRGD questions.",
   alternates: { canonical: "/support" },
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Maestro IDE",
+  name: "Maestro Studio",
   url: "https://maestroide.com",
   contactPoint: {
     "@type": "ContactPoint",

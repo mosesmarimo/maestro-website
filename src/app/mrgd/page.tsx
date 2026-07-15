@@ -5,7 +5,7 @@ import JsonLd from "@/components/JsonLd";
 export const metadata: Metadata = {
   title: "Multimodal Reward-Guided Decoding (MRGD), explained",
   description:
-    "What is multimodal reward-guided decoding (MRGD)? A plain-language explainer of the ICCV 2025 technique — sample k candidates, score them with reward models, keep the best — and how Maestro IDE implements it as a runtime quality dial for AI agents.",
+    "What is multimodal reward-guided decoding (MRGD)? A plain-language explainer of the ICCV 2025 technique — sample k candidates, score them with reward models, keep the best — and how Maestro Studio implements it as a runtime quality dial for AI agents.",
   keywords: [
     "multimodal reward-guided decoding",
     "MRGD",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Multimodal Reward-Guided Decoding (MRGD), explained",
     description:
-      "Sample k candidate continuations every sentence, score each with weighted reward models, keep the best. The ICCV 2025 technique behind Maestro IDE's quality dial — explained plainly.",
+      "Sample k candidate continuations every sentence, score each with weighted reward models, keep the best. The ICCV 2025 technique behind Maestro Studio's quality dial — explained plainly.",
     url: "https://maestroide.com/mrgd",
   },
 };
@@ -35,9 +35,9 @@ const jsonLd = {
       "@type": "TechArticle",
       headline: "Multimodal Reward-Guided Decoding (MRGD), explained",
       description:
-        "A plain-language explainer of multimodal reward-guided decoding (MRGD): sampling k candidate continuations per sentence, scoring them with weighted reward models, and keeping the best — with results from the ICCV 2025 paper and how Maestro IDE implements it.",
-      author: { "@type": "Organization", name: "Maestro IDE", url: "https://maestroide.com" },
-      publisher: { "@type": "Organization", name: "Maestro IDE", url: "https://maestroide.com" },
+        "A plain-language explainer of multimodal reward-guided decoding (MRGD): sampling k candidate continuations per sentence, scoring them with weighted reward models, and keeping the best — with results from the ICCV 2025 paper and how Maestro Studio implements it.",
+      author: { "@type": "Organization", name: "Maestro Studio", url: "https://maestroide.com" },
+      publisher: { "@type": "Organization", name: "Maestro Studio", url: "https://maestroide.com" },
       mainEntityOfPage: "https://maestroide.com/mrgd",
       citation: {
         "@type": "ScholarlyArticle",
@@ -131,9 +131,9 @@ while y has no end-of-sequence token:
             <li style={{ marginBottom: 8 }}>It stacks: applied on top of a DPO-aligned model, hallucination still dropped further.</li>
           </ul>
 
-          <h2 style={{ marginBottom: 14 }}>MRGD in Maestro IDE</h2>
+          <h2 style={{ marginBottom: 14 }}>MRGD in Maestro Studio</h2>
           <p style={{ color: "var(--muted)", marginBottom: 14 }}>
-            <Link href="/">Maestro IDE</Link> implements MRGD as a per-node decoding mode in its
+            <Link href="/">Maestro Studio</Link> implements MRGD as a per-node decoding mode in its
             agent orchestration engine, generalized to any number of weighted scorers: learned
             reward endpoints, programmatic scorers, LLM-as-judge rubrics, or your own scripts. You
             set k, T, and the weights in the inspector; presets cover the precision↔recall

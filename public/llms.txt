@@ -1,6 +1,6 @@
-# Maestro IDE
+# Maestro Studio
 
-> Maestro IDE is a cross-platform AI agent orchestration studio and agent harness, built in Rust. Users compose multi-agent AI workflows on a visual drag-and-drop canvas, register unlimited models from any provider (hosted or local), route every task type — text, code, image generation, video, music, text-to-speech, speech-to-text, embeddings — through a user-defined model routing matrix with conditions and fallback chains, watch every agent work in real time on a live agent map, and control output quality with multimodal reward-guided decoding (MRGD, ICCV 2025). Self-hosted, bring-your-own-keys (stored only in the OS keychain), zero telemetry by default.
+> Maestro Studio is a cross-platform AI agent orchestration studio and agent harness, built in Rust. Users compose multi-agent AI workflows on a visual drag-and-drop canvas, register unlimited models from any provider (hosted or local), route every task type — text, code, image generation, video, music, text-to-speech, speech-to-text, embeddings — through a user-defined model routing matrix with conditions and fallback chains, watch every agent work in real time on a live agent map, and control output quality with multimodal reward-guided decoding (MRGD, ICCV 2025). Self-hosted, bring-your-own-keys (stored only in the OS keychain), zero telemetry by default.
 
 Key facts:
 - Product category: AI agent orchestration platform / AI agent harness / AI IDE for multi-agent systems.

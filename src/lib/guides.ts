@@ -12,7 +12,7 @@ export const GUIDES: Guide[] = [
     slug: "getting-started",
     title: "Getting started",
     description:
-      "Install Maestro IDE, create your first project, register models with keychain-safe keys, set up routing, and run your first workflow — in about fifteen minutes.",
+      "Install Maestro Studio, create your first project, register models with keychain-safe keys, set up routing, and run your first workflow — in about fifteen minutes.",
     group: "Start here",
     card: { k: "Start here · 15 min", blurb: "Create a project, register your first models, store keys safely, and run a three-node workflow — the quarter-hour tour." },
     bodyHtml: `
@@ -74,7 +74,7 @@ export const GUIDES: Guide[] = [
     slug: "first-workflow",
     title: "Build your first real workflow",
     description:
-      "Build a research → draft → review pipeline in Maestro IDE with two agents, a human approval gate, parallel execution, and a spending budget.",
+      "Build a research → draft → review pipeline in Maestro Studio with two agents, a human approval gate, parallel execution, and a spending budget.",
     group: "Start here",
     card: { k: "Start here · 25 min", blurb: "A research → draft → review pipeline with two agents, a human approval gate, and a budget that keeps it honest." },
     bodyHtml: `
@@ -135,7 +135,7 @@ export const GUIDES: Guide[] = [
     slug: "routing-matrix",
     title: "Master the routing matrix",
     description:
-      "How to route text, code, image, video, and speech tasks to different models in Maestro IDE: rules, conditions, fallback chains, cost-aware routing, and the test console.",
+      "How to route text, code, image, video, and speech tasks to different models in Maestro Studio: rules, conditions, fallback chains, cost-aware routing, and the test console.",
     group: "Core",
     card: { k: "Core · 20 min", blurb: "Rules, conditions, fallback chains, and cost-aware routing — and how to route image, video, and speech tasks to different models in seconds." },
     bodyHtml: `
@@ -196,7 +196,7 @@ export const GUIDES: Guide[] = [
     slug: "mrgd-tuning",
     title: "Tune generation quality with MRGD",
     description:
-      "Enable reward-guided decoding in Maestro IDE: choose scorers and weights, set k and the evaluation period, read the candidate inspector, and A/B your presets.",
+      "Enable reward-guided decoding in Maestro Studio: choose scorers and weights, set k and the evaluation period, read the candidate inspector, and A/B your presets.",
     group: "Core",
     card: { k: "Core · 30 min", blurb: "Enable reward-guided decoding on a node, pick scorers, set k and the precision/recall weight, and read the inspector like a pro." },
     bodyHtml: `

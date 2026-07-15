@@ -17,12 +17,12 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://maestroide.com"),
   title: {
-    default: "Maestro IDE — AI Agent Orchestration Studio & Agent Harness",
-    template: "%s — Maestro IDE",
+    default: "Maestro Studio — AI Agent Orchestration Platform & Agent Harness",
+    template: "%s — Maestro Studio",
   },
   description:
-    "Maestro IDE is a cross-platform AI agent orchestration platform and agent harness: compose multi-agent workflows on a visual canvas, route every modality through a model routing matrix, watch every agent live, and control output quality with multimodal reward-guided decoding (MRGD).",
-  applicationName: "Maestro IDE",
+    "Maestro Studio is a cross-platform AI agent orchestration platform and agent harness: compose multi-agent workflows on a visual canvas, route every modality through a model routing matrix, watch every agent live, and control output quality with multimodal reward-guided decoding (MRGD).",
+  applicationName: "Maestro Studio",
   keywords: [
     "AI agent orchestration",
     "AI agent harness",
@@ -50,15 +50,15 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://maestroide.com",
-    siteName: "Maestro IDE",
-    title: "Maestro IDE — AI Agent Orchestration Studio & Agent Harness",
+    siteName: "Maestro Studio",
+    title: "Maestro Studio — AI Agent Orchestration Platform & Agent Harness",
     description:
       "Compose multi-agent AI workflows on a canvas, route text, code, image, video and speech tasks to the models you choose, watch every agent live, and dial quality with MRGD reward-guided decoding.",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Maestro IDE — AI Agent Orchestration Studio & Agent Harness",
+    title: "Maestro Studio — AI Agent Orchestration Platform & Agent Harness",
     description:
       "Visual multi-agent orchestration, a model routing matrix for every modality, a live agent map, and MRGD reward-guided decoding — self-hosted, built in Rust.",
   },

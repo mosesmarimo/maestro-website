@@ -1,9 +1,9 @@
-<svg viewBox="0 0 1280 800" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, 'Segoe UI', sans-serif" role="img" aria-label="Maestro IDE routing matrix editor">
+<svg viewBox="0 0 1280 800" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, 'Segoe UI', sans-serif" role="img" aria-label="Maestro Studio routing matrix editor">
   <rect width="1280" height="800" rx="14" fill="#03111E"/>
   <rect x="0" y="0" width="1280" height="42" rx="14" fill="#0B1F2E"/>
   <rect x="0" y="28" width="1280" height="14" fill="#0B1F2E"/>
   <circle cx="24" cy="21" r="6" fill="#e86a8a"/><circle cx="44" cy="21" r="6" fill="#f2b75c"/><circle cx="64" cy="21" r="6" fill="#5fd3a2"/>
-  <text x="640" y="26" text-anchor="middle" fill="#93A9B8" font-size="12.5">Routing matrix — prod-quality · Maestro IDE</text>
+  <text x="640" y="26" text-anchor="middle" fill="#93A9B8" font-size="12.5">Routing matrix — prod-quality · Maestro Studio</text>
 
   <text x="48" y="96" fill="#E8F0F6" font-size="24" font-weight="650">Routing matrix</text>
   <text x="48" y="122" fill="#93A9B8" font-size="13">Active: <tspan fill="#3EAF86">prod-quality</tspan> · 12 rules · first match wins · fallbacks fail over automatically</text>

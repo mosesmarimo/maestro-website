@@ -1,4 +1,4 @@
-<svg viewBox="0 0 1280 800" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, 'Segoe UI', sans-serif" role="img" aria-label="Maestro IDE canvas with live agent map">
+<svg viewBox="0 0 1280 800" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, 'Segoe UI', sans-serif" role="img" aria-label="Maestro Studio canvas with live agent map">
   <defs>
     <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
       <circle cx="1.5" cy="1.5" r="1.2" fill="#12293A"/>
@@ -13,7 +13,7 @@
   <rect x="0" y="0" width="1280" height="42" rx="14" fill="#0B1F2E"/>
   <rect x="0" y="28" width="1280" height="14" fill="#0B1F2E"/>
   <circle cx="24" cy="21" r="6" fill="#e86a8a"/><circle cx="44" cy="21" r="6" fill="#f2b75c"/><circle cx="64" cy="21" r="6" fill="#5fd3a2"/>
-  <text x="640" y="26" text-anchor="middle" fill="#93A9B8" font-size="12.5">caption-studio — research-review.workflow · Maestro IDE</text>
+  <text x="640" y="26" text-anchor="middle" fill="#93A9B8" font-size="12.5">caption-studio — research-review.workflow · Maestro Studio</text>
   <text x="1150" y="26" fill="#5fd3a2" font-size="11.5" font-family="ui-monospace, Menlo, monospace">● RUN #128 LIVE</text>
 
   <!-- left: component tree -->

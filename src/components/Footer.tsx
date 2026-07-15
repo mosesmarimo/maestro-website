@@ -7,7 +7,7 @@ export default function Footer() {
         <div>
           <Link className="logo" href="/" style={{ fontSize: "1.05rem" }}>
             <img src="/img/logo.svg" alt="" width={20} height={20} />
-            Maestro IDE
+            Maestro Studio
           </Link>
           <p style={{ marginTop: 10, maxWidth: 340 }}>
             A cross-platform AI studio for orchestrating multi-agent systems. Built in Rust.

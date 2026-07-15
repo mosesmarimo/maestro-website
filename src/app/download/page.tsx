@@ -3,11 +3,11 @@ import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Download Maestro IDE",
+  title: "Download Maestro Studio",
   description:
-    "Download Maestro IDE preview builds for Windows, macOS (Apple Silicon and Intel), and Linux. Free preview of the AI agent orchestration studio.",
+    "Download Maestro Studio preview builds for Windows, macOS (Apple Silicon and Intel), and Linux. Free preview of the AI agent orchestration studio.",
   alternates: { canonical: "/download" },
-  keywords: ["download Maestro IDE", "AI agent IDE download", "agent orchestration desktop app", "Tauri AI IDE"],
+  keywords: ["download Maestro Studio", "AI agent IDE download", "agent orchestration desktop app", "Tauri AI IDE"],
 };
 
 const VERSION = "1.3.0";
@@ -57,7 +57,7 @@ const DOWNLOADS: {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  name: "Maestro IDE",
+  name: "Maestro Studio",
   applicationCategory: "DeveloperApplication",
   operatingSystem: "Windows, macOS, Linux",
   softwareVersion: VERSION,
@@ -73,7 +73,7 @@ export default function DownloadPage() {
       <header className="page-hero">
         <div className="wrap">
           <p className="eyebrow">Release channel: Alpha · v{VERSION}</p>
-          <h1>Download Maestro IDE</h1>
+          <h1>Download Maestro Studio</h1>
           <p className="lede">
             Maestro moves through three release channels. Today&rsquo;s builds are{" "}
             <strong style={{ color: "var(--ivory)" }}>Alpha</strong>: the implemented foundations —

@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Maestro IDE — AI Agent Orchestration Studio & Agent Harness";
+export const alt = "Maestro Studio — AI Agent Orchestration Platform & Agent Harness";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -36,7 +36,7 @@ export default function OpengraphImage() {
             <circle cx="256" cy="306" r="14" fill="#93CDB3" />
             <circle cx="380" cy="198" r="14" fill="#93CDB3" />
           </svg>
-          <div style={{ fontSize: 56, fontWeight: 700 }}>Maestro IDE</div>
+          <div style={{ fontSize: 56, fontWeight: 700 }}>Maestro Studio</div>
         </div>
         <div style={{ fontSize: 42, fontWeight: 700, marginTop: 48, lineHeight: 1.2, maxWidth: 980 }}>
           The AI agent orchestration studio

@@ -1,9 +1,9 @@
-<svg viewBox="0 0 1280 800" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, 'Segoe UI', sans-serif" role="img" aria-label="Maestro IDE multi-agent room">
+<svg viewBox="0 0 1280 800" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, 'Segoe UI', sans-serif" role="img" aria-label="Maestro Studio multi-agent room">
   <rect width="1280" height="800" rx="14" fill="#03111E"/>
   <rect x="0" y="0" width="1280" height="42" rx="14" fill="#0B1F2E"/>
   <rect x="0" y="28" width="1280" height="14" fill="#0B1F2E"/>
   <circle cx="24" cy="21" r="6" fill="#e86a8a"/><circle cx="44" cy="21" r="6" fill="#f2b75c"/><circle cx="64" cy="21" r="6" fill="#5fd3a2"/>
-  <text x="640" y="26" text-anchor="middle" fill="#93A9B8" font-size="12.5">Room — launch-week · 3 agents · bound to Telegram group · Maestro IDE</text>
+  <text x="640" y="26" text-anchor="middle" fill="#93A9B8" font-size="12.5">Room — launch-week · 3 agents · bound to Telegram group · Maestro Studio</text>
 
   <!-- left: sessions -->
   <rect x="0" y="42" width="252" height="758" fill="#071A28"/>

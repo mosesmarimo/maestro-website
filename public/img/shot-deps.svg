@@ -1,4 +1,4 @@
-<svg viewBox="0 0 1280 800" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, 'Segoe UI', sans-serif" role="img" aria-label="Maestro IDE dependency graph">
+<svg viewBox="0 0 1280 800" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, 'Segoe UI', sans-serif" role="img" aria-label="Maestro Studio dependency graph">
   <defs>
     <marker id="darr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
       <path d="M0 0 L10 5 L0 10 z" fill="#33566B"/>
@@ -8,7 +8,7 @@
   <rect x="0" y="0" width="1280" height="42" rx="14" fill="#0B1F2E"/>
   <rect x="0" y="28" width="1280" height="14" fill="#0B1F2E"/>
   <circle cx="24" cy="21" r="6" fill="#e86a8a"/><circle cx="44" cy="21" r="6" fill="#f2b75c"/><circle cx="64" cy="21" r="6" fill="#5fd3a2"/>
-  <text x="640" y="26" text-anchor="middle" fill="#93A9B8" font-size="12.5">Dependency graph — pivot: by model · Maestro IDE</text>
+  <text x="640" y="26" text-anchor="middle" fill="#93A9B8" font-size="12.5">Dependency graph — pivot: by model · Maestro Studio</text>
 
   <text x="48" y="94" fill="#E8F0F6" font-size="24" font-weight="650">Dependencies</text>
   <text x="48" y="120" fill="#93A9B8" font-size="13">Selected: <tspan fill="#e86a8a">sdxl-turbo · local</tspan> — highlighting everything that breaks if it's removed.</text>

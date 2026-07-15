@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Features",
   description:
-    "A full tour of Maestro IDE: the visual canvas, live agent map, routing matrix, MRGD reward-guided decoding, observability, memory, skills, rooms, gateway, and more.",
+    "A full tour of Maestro Studio: the visual canvas, live agent map, routing matrix, MRGD reward-guided decoding, observability, memory, skills, rooms, gateway, and more.",
 };
 
 const PLATFORM_CARDS: { title: string; body: string }[] = [

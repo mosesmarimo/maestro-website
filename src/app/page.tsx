@@ -9,7 +9,7 @@ const HOME_JSONLD = {
   "@graph": [
     {
       "@type": "SoftwareApplication",
-      name: "Maestro IDE",
+      name: "Maestro Studio",
       applicationCategory: "DeveloperApplication",
       operatingSystem: "Windows, macOS, Linux",
       description:
@@ -30,12 +30,12 @@ const HOME_JSONLD = {
     },
     {
       "@type": "WebSite",
-      name: "Maestro IDE",
+      name: "Maestro Studio",
       url: "https://maestroide.com",
     },
     {
       "@type": "Organization",
-      name: "Maestro IDE",
+      name: "Maestro Studio",
       url: "https://maestroide.com",
       logo: "https://maestroide.com/img/logo.svg",
     },
