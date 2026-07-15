@@ -17,6 +17,8 @@ Key facts:
 ## Pages
 
 - [Home](https://maestroide.com/): product overview, feature grid, roadmap
+- [Documentation hub](https://maestroide.com/docs): manual, guides, and concepts in one place
+- [User manual](https://maestroide.com/docs/manual): the full product manual — getting started, workflows/models/runs, agent studio, workspace & integrations, administration & operations, reference
 - [Download](https://maestroide.com/download): preview builds for Windows (x64), macOS (Apple Silicon and Intel), and Linux (AppImage/deb)
 - [Support](https://maestroide.com/support): contact form and support email (support@maestroide.com)
 - [Features](https://maestroide.com/features): full feature tour with Available / In-development labels

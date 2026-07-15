@@ -10,6 +10,7 @@
     "seed": "node --env-file=.env.local scripts/seed.mjs"
   },
   "dependencies": {
+    "marked": "^18.0.6",
     "next": "^16.0.0",
     "pg": "^8.13.1",
     "react": "^19.2.0",

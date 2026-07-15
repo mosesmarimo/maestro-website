@@ -29,8 +29,8 @@ export default function Footer() {
           </div>
           <div className="col">
             <span className="h">Learn</span>
-            <Link href="/how-to/getting-started">Getting started</Link>
-            <Link href="/how-to">All guides</Link>
+            <Link href="/docs/manual">User manual</Link>
+            <Link href="/how-to">How-to guides</Link>
             <Link href="/mrgd">MRGD, explained</Link>
             <a href="https://arxiv.org/abs/2508.11616">MRGD paper</a>
           </div>
