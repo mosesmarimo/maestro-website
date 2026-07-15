@@ -87,7 +87,7 @@ Use a typed port whenever possible. `any` is useful for adapters but gives valid
 
 ## Platform and surface support
 
-| Capability | Desktop IDE | Remote console | CLI/service |
+| Capability | Maestro Studio | Remote console | CLI/service |
 |---|:---:|:---:|:---:|
 | Workflow and model authoring | Yes | No | Limited operational commands |
 | Chat, sessions, rooms, memory | Yes | Yes | Yes |

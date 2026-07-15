@@ -337,6 +337,16 @@ h3 { font-size: 1.25rem; font-family: var(--body); font-weight: 650; }
   margin: 18px 0 6px;
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
 }
+.docs-main.manual video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  margin: 18px 0 10px;
+  background: var(--pit);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+}
 .docs-main.manual img + em, .docs-main.manual p > em:only-child { color: var(--faint); font-size: 0.85rem; }
 .docs-main table {
   border-collapse: collapse;

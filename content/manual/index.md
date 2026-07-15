@@ -1,6 +1,6 @@
 ---
 title: Maestro user manual
-description: Complete guide to the Maestro desktop IDE, agent platform, service, and remote console.
+description: Complete guide to Maestro Studio, the agent platform, service, and remote console.
 sidebar_position: 1
 ---
 
@@ -10,7 +10,7 @@ Agents don't need a manager. They need a **maestro**!
 
 Maestro is a desktop AI studio for designing, running, and supervising systems made from models, agents, tools, approvals, and reusable workflows. The same installation also includes persistent chat, memory, skills, multi-agent rooms, automations, messaging channels, secure execution backends, dataset generation, and an optional background service with a remote operational console.
 
-This manual describes Maestro Studio 1.5. Screens use a demonstration project and sample activity, so names, costs, and run counts may differ from your workspace.
+This manual describes Maestro Studio 1.6. Screens use a demonstration project and sample activity, so names, costs, and run counts may differ from your workspace.
 
 ![Maestro workflow editor showing the component tree, visual canvas, activity panel, and node inspector](media/screenshots/workflow-editor.jpg)
 
@@ -27,7 +27,7 @@ This manual describes Maestro Studio 1.5. Screens use a demonstration project an
 
 ## How Maestro fits together
 
-The desktop IDE is the authoring and supervision surface. A project contains human-readable workflow, routing, model-reference, and preset files that can be versioned with Git. Runs produce a persistent event history with prompts, responses, tool calls, approvals, routing decisions, scores, artifacts, time, and cost.
+The desktop studio is the authoring and supervision surface. A project contains human-readable workflow, routing, model-reference, and preset files that can be versioned with Git. Runs produce a persistent event history with prompts, responses, tool calls, approvals, routing decisions, scores, artifacts, time, and cost.
 
 The Maestro service is the always-available operational layer. It keeps schedules, messaging channels, rooms, the web console, and headless runs active after the desktop window closes. The service and desktop share the same identity, policy, and event model.
 

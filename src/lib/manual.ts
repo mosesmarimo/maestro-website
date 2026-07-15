@@ -40,8 +40,10 @@ function parseFrontMatter(raw: string): { meta: Record<string, string>; body: st
 
 function rewriteLinks(markdown: string): string {
   return markdown
-    // screenshot paths → public assets
+    // Markdown media links → public assets.
     .replace(/\]\(media\//g, "](/manual-media/")
+    // Raw HTML media attributes (video sources and posters) → public assets.
+    .replace(/\b(src|poster)="media\//g, '$1="/manual-media/')
     // cross-chapter links: index.md → /docs/manual, foo.md#a → /docs/manual/foo#a
     .replace(/\]\(index\.md(#[^)]*)?\)/g, "](/docs/manual$1)")
     .replace(/\]\(([a-z0-9-]+)\.md(#[^)]*)?\)/g, "](/docs/manual/$1$2)");

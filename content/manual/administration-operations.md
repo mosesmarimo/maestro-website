@@ -27,7 +27,7 @@ The Maestro service hosts an authenticated console for operational work from a b
 
 ![Remote operational console dashboard with spend, run health, model performance, and restricted navigation](media/screenshots/remote-console.jpg)
 
-Workflow canvas and model editing are intentionally absent; use the desktop IDE for authoring. The console shows only the sessions, rooms, jobs, files, analytics, and models visible to the active profile. Runtime administration is restricted to administrators.
+Workflow canvas and model editing are intentionally absent; use Maestro Studio for authoring. The console shows only the sessions, rooms, jobs, files, analytics, and models visible to the active profile. Runtime administration is restricted to administrators.
 
 By default the service listens only on the local computer. To use the console from another device, an administrator must explicitly enable network access and configure TLS. Insecure network mode requires an explicit acknowledgement and should never be exposed to an untrusted network.
 
