@@ -28,8 +28,7 @@ const DOWNLOADS: {
     file: `Maestro-IDE_${VERSION}_x64-setup.exe`,
     kind: "Installer (.exe)",
     alt: { file: `Maestro-IDE_${VERSION}_x64.msi`, kind: ".msi" },
-    note: "The Windows build is being produced now — it will appear here and in the release as soon as it's ready.",
-    comingSoon: true,
+    note: "Unsigned preview — SmartScreen will ask you to confirm (More info → Run anyway).",
   },
   {
     platform: "macOS",
