@@ -10,14 +10,23 @@ export default function ContactForm() {
   const done = state.status === "ok";
   return (
     <form action={formAction} className="contact-form" aria-label="Contact support">
+      {/* Honeypot: hidden from users, catches naive bots. See actions.ts isBot(). */}
+      <input
+        type="text"
+        name="company"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        style={{ position: "absolute", left: "-9999px", width: 1, height: 1, opacity: 0 }}
+      />
       <div className="cf-row">
         <label>
           Name
-          <input type="text" name="name" required minLength={2} placeholder="Your name" disabled={pending || done} />
+          <input type="text" name="name" required minLength={2} maxLength={120} placeholder="Your name" disabled={pending || done} />
         </label>
         <label>
           Email
-          <input type="email" name="email" required placeholder="you@example.com" disabled={pending || done} />
+          <input type="email" name="email" required maxLength={254} placeholder="you@example.com" disabled={pending || done} />
         </label>
       </div>
       <label>

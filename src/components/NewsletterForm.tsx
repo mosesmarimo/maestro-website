@@ -9,11 +9,21 @@ export default function NewsletterForm() {
   const [state, formAction, pending] = useActionState(subscribe, initial);
   return (
     <form action={formAction} className="newsletter" aria-label="Get release updates">
+      {/* Honeypot: hidden from users, catches naive bots. See actions.ts isBot(). */}
+      <input
+        type="text"
+        name="company"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        style={{ position: "absolute", left: "-9999px", width: 1, height: 1, opacity: 0 }}
+      />
       <div className="newsletter-row">
         <input
           type="email"
           name="email"
           required
+          maxLength={254}
           placeholder="you@example.com"
           aria-label="Email address"
           disabled={pending || state.status === "ok"}

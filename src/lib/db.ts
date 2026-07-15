@@ -18,11 +18,16 @@ function getPool(): Pool | null {
   const url = connectionString();
   if (!url) return null;
   if (!pool) {
+    const isLocal = url.includes("localhost") || url.includes("127.0.0.1");
     pool = new Pool({
       connectionString: url,
       max: 5,
       connectionTimeoutMillis: 3000,
-      ssl: url.includes("localhost") || url.includes("127.0.0.1") ? undefined : { rejectUnauthorized: false },
+      // Verify the server certificate against the system CA bundle for hosted
+      // databases (Neon and other managed Postgres present publicly-trusted
+      // certs) so the connection is not exposed to man-in-the-middle. Local
+      // dev over loopback needs no TLS.
+      ssl: isLocal ? undefined : { rejectUnauthorized: true },
     });
   }
   return pool;
