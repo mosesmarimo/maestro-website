@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   keywords: ["download Maestro Studio", "AI agent IDE download", "agent orchestration desktop app", "Tauri AI IDE"],
 };
 
-const VERSION = "1.3.0";
+const VERSION = "1.6.0";
 const BASE = `https://github.com/mosesmarimo/maestro-releases/releases/download/v${VERSION}`;
 
 const DOWNLOADS: {
@@ -23,34 +23,27 @@ const DOWNLOADS: {
   comingSoon?: boolean;
 }[] = [
   {
+    platform: "macOS",
+    arch: "Universal · Apple Silicon + Intel · macOS 12+",
+    file: `Maestro-Studio_${VERSION}_universal.dmg`,
+    kind: "Disk image (.dmg)",
+    note: "Unsigned preview — on first open: right-click the app → Open, or allow it under System Settings → Privacy & Security.",
+  },
+  {
     platform: "Windows",
     arch: "x64 · Windows 10+",
-    file: `Maestro-IDE_${VERSION}_x64-setup.exe`,
+    file: `Maestro-Studio_${VERSION}_x64-setup.exe`,
     kind: "Installer (.exe)",
-    alt: { file: `Maestro-IDE_${VERSION}_x64.msi`, kind: ".msi" },
-    note: "Unsigned preview — SmartScreen will ask you to confirm (More info → Run anyway).",
-  },
-  {
-    platform: "macOS",
-    arch: "Apple Silicon · macOS 12+",
-    file: `Maestro-IDE_${VERSION}_aarch64.dmg`,
-    kind: "Disk image (.dmg)",
-    note: "Unsigned preview — on first open: right-click the app → Open, or allow it under System Settings → Privacy & Security.",
-  },
-  {
-    platform: "macOS",
-    arch: "Intel · macOS 12+",
-    file: `Maestro-IDE_${VERSION}_x64.dmg`,
-    kind: "Disk image (.dmg)",
-    note: "Unsigned preview — on first open: right-click the app → Open, or allow it under System Settings → Privacy & Security.",
+    note: "The v1.6.0 Windows build is finishing in CI. The v1.3.0 foundations preview is on the releases page below.",
+    comingSoon: true,
   },
   {
     platform: "Linux",
     arch: "x64 · Ubuntu 22.04+, Fedora 39+",
-    file: `Maestro-IDE_${VERSION}_amd64.AppImage`,
+    file: `Maestro-Studio_${VERSION}_amd64.AppImage`,
     kind: "AppImage",
-    alt: { file: `Maestro-IDE_${VERSION}_amd64.deb`, kind: ".deb" },
-    note: "Make the AppImage executable (chmod +x) and run it, or install the .deb with apt.",
+    note: "The v1.6.0 Linux build is finishing in CI. The v1.3.0 foundations preview is on the releases page below.",
+    comingSoon: true,
   },
 ];
 
@@ -76,10 +69,11 @@ export default function DownloadPage() {
           <h1>Download Maestro Studio</h1>
           <p className="lede">
             Maestro moves through three release channels. Today&rsquo;s builds are{" "}
-            <strong style={{ color: "var(--ivory)" }}>Alpha</strong>: the implemented foundations —
-            projects, the model registry with keychain secrets, the routing matrix with its test
-            console, and the workflow canvas — with the remaining Phase-1 stages landing per the{" "}
-            <Link href="/#roadmap">roadmap</Link>. Free while in preview.
+            <strong style={{ color: "var(--ivory)" }}>Alpha</strong>: the whole blueprint is
+            implemented — the orchestration IDE, real media generation, persistent memory, skills,
+            the messaging gateway, sandboxed backends, browser automation with vision, rooms, the web
+            console, and trajectory export. Builds are unsigned and rough in places; signing and
+            hardening come with Beta per the <Link href="/#roadmap">roadmap</Link>. Free while in preview.
           </p>
         </div>
       </header>

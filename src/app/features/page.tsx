@@ -31,9 +31,9 @@ export default function FeaturesPage() {
           <h1>Every feature, movement by movement.</h1>
           <p className="lede">
             Maestro is built against a public blueprint in two phases: the orchestration IDE, then
-            the agent platform layer. Everything below is in that blueprint — labeled{" "}
-            <span className="badge badge-now">Available</span> or{" "}
-            <span className="badge badge-dev">In development</span> so you always know what ships today.
+            the agent platform layer. Everything below is now implemented and ships in the current{" "}
+            <span className="badge badge-now">Available</span> Alpha build — unsigned and rough in
+            places, but real.
           </p>
         </div>
       </header>
@@ -90,7 +90,7 @@ export default function FeaturesPage() {
       <section className="section">
         <div className="wrap">
           <div className="section-head reveal">
-            <p className="eyebrow">Decode <span className="dot">·</span> Phase 1 <span className="badge badge-dev">In development</span></p>
+            <p className="eyebrow">Decode <span className="dot">·</span> Phase 1 <span className="badge badge-now">Available</span></p>
             <h2>MRGD: quality you can steer at run time.</h2>
             <p className="lede">
               Maestro implements multimodal reward-guided decoding from the ICCV 2025 paper{" "}
@@ -116,7 +116,7 @@ export default function FeaturesPage() {
       <section className="section alt">
         <div className="wrap">
           <div className="section-head reveal">
-            <p className="eyebrow">Observe <span className="dot">·</span> Phase 1 <span className="badge badge-dev">In development</span></p>
+            <p className="eyebrow">Observe <span className="dot">·</span> Phase 1 <span className="badge badge-now">Available</span></p>
             <h2>Runs you can replay. Spend you can see.</h2>
             <p className="lede">
               Every run writes an append-only event log — prompts, responses, tool calls, routing
@@ -146,7 +146,7 @@ export default function FeaturesPage() {
       <section className="section">
         <div className="wrap">
           <div className="section-head reveal">
-            <p className="eyebrow">The agent platform <span className="dot">·</span> Phase 2 <span className="badge badge-dev">In development</span></p>
+            <p className="eyebrow">The agent platform <span className="dot">·</span> Phase 2 <span className="badge badge-now">Available</span></p>
             <h2>From IDE to companion.</h2>
             <p className="lede">Phase 2 adds the layer that makes agents feel less like scripts and more like colleagues — specified in the same public blueprint, built in the same staged way.</p>
           </div>

@@ -49,7 +49,7 @@ const ROWS: { dim: string; hermes: string; maestro: string }[] = [
   { dim: "Skills", hermes: "40+ built-in, autonomous skill creation, agentskills.io SKILL.md standard", maestro: "Same open standard — with a mandatory human approval gate before any self-drafted skill activates" },
   { dim: "Messaging", hermes: "Telegram, Discord, Slack, WhatsApp, Signal from one gateway", maestro: "Same platform set planned, with pairing codes and per-channel tool permissions" },
   { dim: "Observability", hermes: "Session logs; Studio adds usage analytics", maestro: "Replayable append-only event log per run, Gantt timelines, live agent positions, cost dashboards, budgets that pause runs" },
-  { dim: "Availability", hermes: "Shipping today; MIT licensed; large community", maestro: "Staged development against a public blueprint; foundations implemented, Phase 1 in build" },
+  { dim: "Availability", hermes: "Shipping today; MIT licensed; large community", maestro: "Full blueprint implemented and shipping in an unsigned Alpha; Beta brings signing and hardening" },
 ];
 
 export default function HermesComparePage() {

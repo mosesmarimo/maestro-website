@@ -200,7 +200,7 @@ export const GUIDES: Guide[] = [
     group: "Core",
     card: { k: "Core · 30 min", blurb: "Enable reward-guided decoding on a node, pick scorers, set k and the precision/recall weight, and read the inspector like a pro." },
     bodyHtml: `
-<p class="eyebrow">Core · about 30 minutes <span class="badge badge-dev">In development — ships with the MRGD stage</span></p>
+<p class="eyebrow">Core · about 30 minutes <span class="badge badge-now">Available</span></p>
 <h1>Tune generation quality with MRGD</h1>
 <p class="lede">Reward-guided decoding turns "hope the model gets it right" into "generate five candidates and keep the best one, every sentence." This guide shows you how to enable it, what the knobs mean, and how to read the inspector.</p>
 
@@ -270,11 +270,11 @@ w     — your precision ⇄ recall dial, changeable at run time</code></pre>
     group: "Agent platform",
     card: { k: "Agent platform · 20 min", blurb: "Pair your account with a code, talk to your agent from your phone, and schedule a daily briefing that arrives while the IDE is closed." },
     bodyHtml: `
-<p class="eyebrow">Agent platform · about 20 minutes <span class="badge badge-dev">In development — Phase 2, gateway stage</span></p>
+<p class="eyebrow">Agent platform · about 20 minutes <span class="badge badge-now">Available</span></p>
 <h1>Put an agent on Telegram</h1>
 <p class="lede">The gateway connects your agents to the messaging apps you already live in. This guide covers Telegram end to end: bot token, pairing, chatting from your phone, and a scheduled morning briefing that arrives with the IDE closed. Discord and Slack follow the same shape.</p>
 
-<div class="callout"><strong>This feature is in development.</strong> The steps below describe the gateway exactly as specified in the Maestro blueprint (UR-1500/UR-1600), so you know how it will work when the stage ships. Follow the <a href="/#roadmap">roadmap</a> for timing.</div>
+<div class="callout"><strong>Ships in the current Alpha.</strong> The steps below describe the gateway as specified in the Maestro blueprint (UR-1500/UR-1600). It is Alpha software — unsigned and rough in places, so expect bugs.</div>
 
 <h2>What you'll need</h2>
 <ul>
@@ -339,11 +339,11 @@ w     — your precision ⇄ recall dial, changeable at run time</code></pre>
     group: "Agent platform",
     card: { k: "Agent platform · 20 min", blurb: "Teach agents once: review and approve self-drafted skills, manage what agents remember, and search everything you've ever discussed." },
     bodyHtml: `
-<p class="eyebrow">Agent platform · about 20 minutes <span class="badge badge-dev">In development — Phase 2, learning stage</span></p>
+<p class="eyebrow">Agent platform · about 20 minutes <span class="badge badge-now">Available</span></p>
 <h1>Skills &amp; memory</h1>
 <p class="lede">Two halves of one loop: memory makes agents know <em>you</em>; skills make them keep <em>what they learned</em>. Both are transparent files, and both keep you in charge.</p>
 
-<div class="callout"><strong>This feature is in development.</strong> Everything below is specified in the Maestro blueprint (UR-1300/UR-1400) — including the safety gates — and describes how it will work when the learning stage ships.</div>
+<div class="callout"><strong>Ships in the current Alpha.</strong> Everything below is implemented as specified in the Maestro blueprint (UR-1300/UR-1400) — including the safety gates. It is Alpha software — expect rough edges.</div>
 
 <figure class="shotfig">
   <div class="frame"><img src="/img/shot-memory.svg" alt="Memory panel and skills review queue"></div>

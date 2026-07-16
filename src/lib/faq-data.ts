@@ -26,7 +26,7 @@ export const FAQ_SEED: FaqEntry[] = [
   {
     question: "Can I use it today?",
     answerHtml:
-      "<p>Maestro is in active, staged development against a public blueprint. Stage A (the foundations: application shell, project system, model registry with keychain secrets, and the routing matrix with its test console) is implemented. The remaining Phase-1 stages — full canvas orchestration, the live agent map, the MRGD engine, media adapters, and signed installers — are in build, in that order.</p><p>Everything on this site labeled \"In development\" is specified in the blueprint and staged in the specification; nothing here is aspiration without a plan. See the <a href=\"/#roadmap\">roadmap</a>.</p>",
+      "<p>Yes. The whole blueprint — the orchestration IDE and the agent platform layer — is now implemented and ships in the current Alpha build: the canvas and orchestrator with event-log replay, the live agent map, the MRGD engine, real media generation, persistent memory, self-authored skills, the messaging gateway, natural-language schedules, sandboxed Docker/SSH backends, browser automation with vision, multi-agent rooms, the web console, and trajectory export.</p><p>It is an <strong>Alpha</strong>: builds are unsigned and rough in places, so expect bugs. Signed and notarized installers, stability, and production hardening arrive with Beta. See the <a href=\"/#roadmap\">roadmap</a>.</p>",
   },
   {
     question: "Do I need my own API keys?",
@@ -106,6 +106,6 @@ export const FAQ_SEED: FaqEntry[] = [
   {
     question: "Are the screenshots on this site real?",
     answerHtml:
-      "<p>They are interface previews rendered from the product's design specification (MSTRO-SPEC-001) — pixel-accurate to the layouts, colors, and data the spec defines, including features still in development. As stages ship, previews are replaced with captures from the running product.</p>",
+      "<p>They are interface previews rendered from the product's design specification (MSTRO-SPEC-001) — pixel-accurate to the layouts, colors, and data the spec defines. They are design previews, not screenshots of the running Alpha; as the product stabilizes toward Beta they are being replaced with captures from the running app.</p>",
   },
 ];
