@@ -27,23 +27,23 @@ const DOWNLOADS: {
     arch: "Universal · Apple Silicon + Intel · macOS 12+",
     file: `Maestro-Studio_${VERSION}_universal.dmg`,
     kind: "Disk image (.dmg)",
-    note: "Unsigned preview — on first open: right-click the app → Open, or allow it under System Settings → Privacy & Security.",
+    note: "Unsigned preview — macOS blocks it on first open. Open System Settings → Privacy & Security → Open Anyway, or run: xattr -dr com.apple.quarantine '/Applications/Maestro Studio.app'",
   },
   {
     platform: "Windows",
     arch: "x64 · Windows 10+",
     file: `Maestro-Studio_${VERSION}_x64-setup.exe`,
     kind: "Installer (.exe)",
-    note: "The v1.6.0 Windows build is finishing in CI. The v1.3.0 foundations preview is on the releases page below.",
-    comingSoon: true,
+    alt: { file: `Maestro-Studio_${VERSION}_x64.msi`, kind: ".msi" },
+    note: "Unsigned preview — SmartScreen will ask you to confirm: More info → Run anyway.",
   },
   {
     platform: "Linux",
     arch: "x64 · Ubuntu 22.04+, Fedora 39+",
     file: `Maestro-Studio_${VERSION}_amd64.AppImage`,
     kind: "AppImage",
-    note: "The v1.6.0 Linux build is finishing in CI. The v1.3.0 foundations preview is on the releases page below.",
-    comingSoon: true,
+    alt: { file: `Maestro-Studio_${VERSION}_amd64.deb`, kind: ".deb" },
+    note: "Make the AppImage executable (chmod +x) and run it, or install the .deb with apt.",
   },
 ];
 
@@ -83,17 +83,17 @@ export default function DownloadPage() {
           <div className="channels">
             <div className="channel now">
               <div className="ch-tag">Alpha — you are here</div>
-              <h3>Try the foundations</h3>
-              <p>Unsigned preview builds, updated as stages land. Expect rough edges and fast changes; project files stay forward-compatible.</p>
+              <h3>The full studio, unsigned</h3>
+              <p>Every capability in the blueprint ships in these preview builds — unsigned, with rough edges and fast changes. Project files stay forward-compatible.</p>
             </div>
             <div className="channel">
               <div className="ch-tag">Beta</div>
-              <h3>Phase 1 feature-complete</h3>
-              <p>Opens when orchestration, the live agent map, and MRGD are all in: signed installers, auto-updates, and a stabilization focus.</p>
+              <h3>Signed &amp; auto-updating</h3>
+              <p>Code-signed, notarized installers with in-app auto-updates and a stabilization focus — no more Gatekeeper prompts.</p>
             </div>
             <div className="channel">
               <div className="ch-tag">Stable</div>
-              <h3>Phase-1 GA</h3>
+              <h3>Production GA</h3>
               <p>Production-ready: code-signed and notarized on every platform, with the full acceptance suite green behind each release.</p>
             </div>
           </div>
