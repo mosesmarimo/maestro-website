@@ -16,9 +16,9 @@ export default function HowToIndex() {
           <p className="eyebrow">Learn by doing</p>
           <h1>How-to guides</h1>
           <p className="lede">
-            Short, honest, step-by-step. Guides covering in-development features say so at the top —
-            they describe exactly what the blueprint specifies, so you know what&rsquo;s coming and
-            how it will work.
+            Short, honest, step-by-step. Every feature these guides cover ships in the current
+            Alpha — unsigned and rough in places, but real. They describe exactly what the
+            blueprint specifies.
           </p>
         </div>
       </header>
