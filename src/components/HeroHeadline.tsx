@@ -8,7 +8,7 @@ type Part = { t: string; tint?: boolean };
 const HEADLINES: Part[][] = [
   [{ t: "Stop guessing what your agents are doing. " }, { t: "Conduct", tint: true }, { t: " them." }],
   [{ t: "Maestro. Because talent isn't enough. " }, { t: "Orchestrate, not improvise.", tint: true }],
-  [{ t: "AI Agents don't need a manager. They need a " }, { t: "maestro", tint: true }, { t: " to guarantee symphony." }],
+  [{ t: "Agents need no manager. They need a " }, { t: "maestro", tint: true }, { t: " for symphony." }],
   [{ t: "Many agents. " }, { t: "One score.", tint: true }, { t: " Drowning noise with symphony!" }],
 ];
 
