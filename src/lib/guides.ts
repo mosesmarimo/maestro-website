@@ -266,25 +266,25 @@ w     — your precision ⇄ recall dial, changeable at run time</code></pre>
     slug: "telegram-agent",
     title: "Put an agent on Telegram",
     description:
-      "Pair your Telegram account with a Maestro agent, chat from your phone, and schedule a daily briefing delivered while the IDE is closed.",
+      "Pair your Telegram account with a Maestro agent, chat from your phone, and schedule a daily briefing delivered while Studio is closed.",
     group: "Agent platform",
-    card: { k: "Agent platform · 20 min", blurb: "Pair your account with a code, talk to your agent from your phone, and schedule a daily briefing that arrives while the IDE is closed." },
+    card: { k: "Agent platform · 20 min", blurb: "Pair your account with a code, talk to your agent from your phone, and schedule a daily briefing that arrives while Studio is closed." },
     bodyHtml: `
 <p class="eyebrow">Agent platform · about 20 minutes <span class="badge badge-dev">In development — Phase 2, gateway stage</span></p>
 <h1>Put an agent on Telegram</h1>
-<p class="lede">The gateway connects your agents to the messaging apps you already live in. This guide covers Telegram end to end: bot token, pairing, chatting from your phone, and a scheduled morning briefing that arrives with the IDE closed. Discord and Slack follow the same shape.</p>
+<p class="lede">The gateway connects your agents to the messaging apps you already live in. This guide covers Telegram end to end: bot token, pairing, chatting from your phone, and a scheduled morning briefing that arrives with Studio closed. Discord and Slack follow the same shape.</p>
 
 <div class="callout"><strong>This feature is in development.</strong> The steps below describe the gateway exactly as specified in the Maestro blueprint (UR-1500/UR-1600), so you know how it will work when the stage ships. Follow the <a href="/#roadmap">roadmap</a> for timing.</div>
 
 <h2>What you'll need</h2>
 <ul>
-  <li>The <strong>Maestro service</strong> installed (Settings → Service → Install). The gateway runs in the background service so agents answer even when the IDE window is closed.</li>
+  <li>The <strong>Maestro service</strong> installed (Settings → Service → Install). The gateway runs in the background service so agents answer even when the Studio window is closed.</li>
   <li>A <strong>Telegram bot token</strong> — create a bot with Telegram's @BotFather and copy the token it gives you. Your bot, your token, your data path.</li>
 </ul>
 
 <h2>1. Connect the platform</h2>
 <ol class="steps">
-  <li>Open <strong>Gateway</strong> in the IDE and choose <strong>Add platform → Telegram</strong>.</li>
+  <li>Open <strong>Gateway</strong> in Studio and choose <strong>Add platform → Telegram</strong>.</li>
   <li>Paste the bot token. It goes to your OS keychain like every other credential — never into config files.</li>
   <li>The connection health card flips green when the bot is listening.</li>
 </ol>
@@ -294,28 +294,28 @@ w     — your precision ⇄ recall dial, changeable at run time</code></pre>
 <ol class="steps">
   <li>Click <strong>Pair a device</strong>. Maestro shows a 6-digit code (valid ten minutes).</li>
   <li>On your phone, message your bot: <code>/pair 428913</code>.</li>
-  <li>The pairing appears in the IDE — bound to your account and profile, revocable anytime. Unpaired strangers get pairing instructions and nothing else.</li>
+  <li>The pairing appears in Studio — bound to your account and profile, revocable anytime. Unpaired strangers get pairing instructions and nothing else.</li>
 </ol>
 
 <h2>3. Choose what remote chats may do</h2>
 <ol class="steps">
   <li>On the pairing, set channel permissions: <strong>read-only</strong> (ask questions, get answers) or <strong>can execute tools</strong>.</li>
-  <li>Even with tools enabled, privileged actions honor the same policies as the IDE: sandbox rules apply, and anything requiring approval sends you an approval message — reply <code>approve</code> or <code>deny</code>.</li>
+  <li>Even with tools enabled, privileged actions honor the same policies as Studio: sandbox rules apply, and anything requiring approval sends you an approval message — reply <code>approve</code> or <code>deny</code>.</li>
 </ol>
 
 <h2>4. Talk to your agent</h2>
 <ol class="steps">
   <li>Message the bot like a colleague: <em>"Summarize yesterday's run failures in the media pipeline."</em></li>
   <li>Voice memos work — audio is transcribed through your matrix's <code>stt</code> route, and you can ask for spoken replies via your <code>tts</code> route.</li>
-  <li>Continuity is real: the same session is visible in the IDE chat panel. Start at your desk, continue from the bus.</li>
+  <li>Continuity is real: the same session is visible in the Studio chat panel. Start at your desk, continue from the bus.</li>
 </ol>
 
 <h2>5. Schedule the morning briefing</h2>
 <ol class="steps">
   <li>Open <strong>Jobs → New job</strong> and type the schedule in plain language: <em>"every weekday at 8am"</em>. Maestro shows the parsed cron (<code>0 8 * * 1-5</code>) for you to confirm — the original wording is kept.</li>
   <li>Set the action: run your <code>daily-briefing</code> workflow, or a direct agent prompt.</li>
-  <li>Set delivery: <strong>Telegram → your chat</strong>. Add the IDE notification too if you like — any output can go to any connected channel.</li>
-  <li>Close the IDE. The service fires the job on schedule; the briefing lands on your phone; the full run appears in history next time you open Maestro. If your machine was asleep at 8am, the job's catch-up policy (run once / skip) decides what happens on wake — your choice, logged either way.</li>
+  <li>Set delivery: <strong>Telegram → your chat</strong>. Add the Studio notification too if you like — any output can go to any connected channel.</li>
+  <li>Close Studio. The service fires the job on schedule; the briefing lands on your phone; the full run appears in history next time you open Maestro. If your machine was asleep at 8am, the job's catch-up policy (run once / skip) decides what happens on wake — your choice, logged either way.</li>
 </ol>
 
 <figure class="shotfig">

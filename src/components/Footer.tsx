@@ -37,7 +37,7 @@ export default function Footer() {
           <div className="col">
             <span className="h">Support</span>
             <Link href="/support">Contact support</Link>
-            <a href="mailto:support@maestroide.com">support@maestroide.com</a>
+            <a href="mailto:support@maestrostudio.dev">support@maestrostudio.dev</a>
           </div>
         </div>
       </div>

@@ -14,8 +14,8 @@ const HOME_JSONLD = {
       operatingSystem: "Windows, macOS, Linux",
       description:
         "A cross-platform AI agent orchestration studio and agent harness: visual multi-agent workflow canvas, model routing matrix for every modality, live agent map, replayable run logs, and multimodal reward-guided decoding (MRGD).",
-      url: "https://maestroide.com",
-      softwareHelp: "https://maestroide.com/how-to",
+      url: "https://maestrostudio.dev",
+      softwareHelp: "https://maestrostudio.dev/how-to",
       featureList: [
         "Visual workflow canvas for multi-agent systems",
         "Live agent map and dependency graphs",
@@ -31,13 +31,13 @@ const HOME_JSONLD = {
     {
       "@type": "WebSite",
       name: "Maestro Studio",
-      url: "https://maestroide.com",
+      url: "https://maestrostudio.dev",
     },
     {
       "@type": "Organization",
       name: "Maestro Studio",
-      url: "https://maestroide.com",
-      logo: "https://maestroide.com/img/logo.svg",
+      url: "https://maestrostudio.dev",
+      logo: "https://maestrostudio.dev/img/logo.svg",
     },
   ],
 };
@@ -55,7 +55,7 @@ const FEATURES: { title: string; body: string; dev?: boolean }[] = [
   { title: "Persistent memory", body: "Agents remember your preferences, projects, and environment across sessions — every entry visible, editable, and stored as plain files you can version.", dev: true },
   { title: "Self-authored skills", body: "After solving a hard problem, an agent drafts a reusable skill in the open SKILL.md format. Drafts wait in a review queue — nothing activates without your approval.", dev: true },
   { title: "Messaging gateway", body: "Talk to your agents from Telegram, Discord, Slack, and more — with pairing-code security, voice memo transcription, and conversations that continue across surfaces.", dev: true },
-  { title: "Schedules & headless service", body: "“Every weekday at 8am, summarize my open issues and send it to Telegram.” A background service runs your automations with the IDE closed.", dev: true },
+  { title: "Schedules & headless service", body: "“Every weekday at 8am, summarize my open issues and send it to Telegram.” A background service runs your automations with Studio closed.", dev: true },
   { title: "Sandboxed execution backends", body: "Agent shell and code tools run where you choose: local, hardened Docker, SSH remotes, or cloud sandboxes — same sandbox policy everywhere.", dev: true },
   { title: "Browser & web tools", body: "Web search, clean page extraction, and full browser automation — navigate, click, type, screenshot — with every action logged and vision analysis in the loop.", dev: true },
   { title: "Multi-agent rooms", body: "Several agents, one conversation. @mention routing, shared context with automatic compression, and one-click conversion of a room into a workflow skeleton.", dev: true },
@@ -66,8 +66,8 @@ const FEATURES: { title: string; body: string; dev?: boolean }[] = [
 
 const STAGES: { tag: string; cls?: string; title: string; body: string }[] = [
   { tag: "Stage A · Complete", cls: "done", title: "Foundations", body: "Cross-platform shell, project system, model registry with keychain secrets, routing matrix with resolver and test console." },
-  { tag: "Stages B–D · In progress", cls: "now", title: "Orchestration IDE (Phase 1 GA)", body: "Full canvas authoring, the orchestrator with event-log replay, the live agent map, the MRGD engine and inspector, media adapters, dashboards, and signed installers." },
-  { tag: "Stage E", title: "The service split", body: "One headless service, many surfaces: the IDE attaches as a client, a CLI arrives, chat sessions and persistent memory land." },
+  { tag: "Stages B–D · In progress", cls: "now", title: "Orchestration studio (Phase 1 GA)", body: "Full canvas authoring, the orchestrator with event-log replay, the live agent map, the MRGD engine and inspector, media adapters, dashboards, and signed installers." },
+  { tag: "Stage E", title: "The service split", body: "One headless service, many surfaces: Studio attaches as a client, a CLI arrives, chat sessions and persistent memory land." },
   { tag: "Stage F", title: "Learning & automation", body: "Skills with the approval queue, natural-language schedules, and the messaging gateway — Telegram, Discord, and Slack first." },
   { tag: "Stage G", title: "Reach & power", body: "Hardened Docker and SSH execution backends, the backend file browser, web search and browser automation, and MCP." },
   { tag: "Stages H–I", title: "Collaboration & the data engine (Phase 2 GA)", body: "Multi-agent rooms, accounts and profiles, the remote web console, voice in and out, and trajectory export for fine-tuning." },
@@ -82,7 +82,7 @@ export default function HomePage() {
           <p className="eyebrow">The AI agent orchestration studio</p>
           <HeroHeadline />
           <p className="lede">
-            Maestro is a desktop IDE and agent harness for multi-agent AI systems. Compose
+            Maestro is a desktop studio and agent harness for multi-agent AI systems. Compose
             workflows on a canvas, route every kind of task — text, code, images, video, speech —
             to the model you choose, and watch every agent work, live, on a map of your system.
           </p>
@@ -170,7 +170,7 @@ export default function HomePage() {
             <p className="eyebrow">In development · the agent platform layer</p>
             <h2>Agents that remember, learn,<br />and answer you anywhere.</h2>
             <p className="lede">
-              Phase 2 turns Maestro from an IDE into a companion: persistent memory, skills your
+              Phase 2 turns Maestro from a studio into a companion: persistent memory, skills your
               agents write themselves, multi-agent rooms, and a headless service that keeps working
               after you close the window.
             </p>

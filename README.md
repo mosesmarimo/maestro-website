@@ -1,15 +1,15 @@
 # maestro-website
 
-Marketing and documentation website for **Maestro IDE** — a cross-platform AI studio for orchestrating multi-agent systems (visual workflow canvas, live agent map, model routing matrix, MRGD reward-guided decoding).
+Marketing and documentation website for **Maestro Studio** — a cross-platform AI agent orchestration platform for multi-agent systems (visual workflow canvas, live agent map, model routing matrix, MRGD reward-guided decoding).
 
-**Production:** https://maestroide.com (Vercel; also https://maestro-website-eight.vercel.app)
+**Production:** https://maestrostudio.dev (Vercel; also https://maestro-website-eight.vercel.app)
 
 ## Stack
 
 - **Next.js 16** (App Router, React Server Components) + TypeScript
 - **PostgreSQL** (Neon via the Vercel Marketplace) — serves the FAQ content and stores newsletter subscribers; the schema is applied lazily on first use and the site falls back to bundled content if the database is unreachable
 - Design system in plain CSS (`src/app/globals.css`); fonts via `next/font` (Fraunces · Instrument Sans · JetBrains Mono)
-- Hosted on **Vercel**, custom domain `maestroide.com`
+- Hosted on **Vercel**, custom domain `maestrostudio.dev`
 
 ## Structure
 
@@ -59,4 +59,4 @@ npm run dev
 
 ## Domain
 
-`maestroide.com` and `www.maestroide.com` are attached to the Vercel project. DNS must point at Vercel (at the current registrar: `A @ 76.76.21.21` and `CNAME www cname.vercel-dns.com`, or switch nameservers to `ns1`/`ns2.vercel-dns.com`).
+`maestrostudio.dev` and `www.maestrostudio.dev` are attached to the Vercel project. DNS must point at Vercel (at the current registrar: `A @ 76.76.21.21` and `CNAME www cname.vercel-dns.com`, or switch nameservers to `ns1`/`ns2.vercel-dns.com`).

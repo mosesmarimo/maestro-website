@@ -12,7 +12,7 @@ const PLATFORM_CARDS: { title: string; body: string }[] = [
   { title: "Skills with an approval gate", body: "After a hard task succeeds, the agent drafts a reusable SKILL.md (agentskills.io-compatible). You review and approve before it ever activates. Skills version themselves and propose their own improvements — as diffs, for you to accept." },
   { title: "Multi-agent rooms", body: "@mention a specific agent or let a moderator route. Shared context compresses automatically when it outgrows the smallest model's window — losslessly, with the originals kept in the event log." },
   { title: "Messaging gateway", body: "Telegram, Discord, and Slack first; Matrix and more behind a documented bridge contract. Pairing codes gate access; voice memos are transcribed through your STT route; conversations continue across surfaces." },
-  { title: "Schedules & headless service", body: "Describe a schedule in plain language, confirm the parsed cron, pick a delivery channel. The background service runs it — and honors the same budgets, sandbox, and approval rules as the IDE." },
+  { title: "Schedules & headless service", body: "Describe a schedule in plain language, confirm the parsed cron, pick a delivery channel. The background service runs it — and honors the same budgets, sandbox, and approval rules as Studio." },
   { title: "Execution backends", body: "Local, hardened Docker (read-only root, dropped capabilities, no network unless granted), SSH remotes, and cloud sandboxes — selectable per project, overridable per node, logged per tool call. Plus a file browser over all of them." },
   { title: "Browser & web tools", body: "Search, extract pages to clean markdown, and drive a real browser — navigate, click, type, screenshot — with vision analysis closing the loop and hard rules against touching credentials or payment fields." },
   { title: "Chat surface, voice in and out", body: "A first-class chat panel with streaming tool traces, interrupt-and-redirect, and /model switching mid-conversation. Speak to your agents and let them answer aloud — through whichever STT and TTS models your matrix routes to." },
@@ -30,7 +30,7 @@ export default function FeaturesPage() {
           <p className="eyebrow">The full tour</p>
           <h1>Every feature, movement by movement.</h1>
           <p className="lede">
-            Maestro is built against a public blueprint in two phases: the orchestration IDE, then
+            Maestro is built against a public blueprint in two phases: the orchestration studio, then
             the agent platform layer. Everything below is in that blueprint — labeled{" "}
             <span className="badge badge-now">Available</span> or{" "}
             <span className="badge badge-dev">In development</span> so you always know what ships today.
@@ -147,7 +147,7 @@ export default function FeaturesPage() {
         <div className="wrap">
           <div className="section-head reveal">
             <p className="eyebrow">The agent platform <span className="dot">·</span> Phase 2 <span className="badge badge-dev">In development</span></p>
-            <h2>From IDE to companion.</h2>
+            <h2>From studio to companion.</h2>
             <p className="lede">Phase 2 adds the layer that makes agents feel less like scripts and more like colleagues — specified in the same public blueprint, built in the same staged way.</p>
           </div>
           <div className="split">

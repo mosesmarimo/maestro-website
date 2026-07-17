@@ -15,7 +15,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://maestroide.com"),
+  metadataBase: new URL("https://maestrostudio.dev"),
   title: {
     default: "Maestro Studio — AI Agent Orchestration Platform & Agent Harness",
     template: "%s — Maestro Studio",
@@ -42,14 +42,14 @@ export const metadata: Metadata = {
     "Hermes Agent alternative",
     "self-hosted AI agents",
     "MCP client",
-    "AI IDE",
+    "AI studio",
     "agent framework",
   ],
   category: "technology",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
-    url: "https://maestroide.com",
+    url: "https://maestrostudio.dev",
     siteName: "Maestro Studio",
     title: "Maestro Studio — AI Agent Orchestration Platform & Agent Harness",
     description:

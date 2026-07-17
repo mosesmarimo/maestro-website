@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: "Maestro Studio and Hermes Agent — how they relate and differ",
     description:
       "Shared DNA, different instruments: what Maestro Studio openly adopts from Hermes Agent's capability set, and what it adds — visual orchestration, a live agent map, a routing matrix, and MRGD.",
-    url: "https://maestroide.com/compare/hermes-agent",
+    url: "https://maestrostudio.dev/compare/hermes-agent",
   },
 };
 
@@ -33,13 +33,13 @@ const jsonLd = {
   headline: "Maestro Studio and Hermes Agent — how they relate and differ",
   description:
     "A factual comparison of Maestro Studio with Hermes Agent (Nous Research) and Hermes Studio (EKKOLearnAI): shared capabilities, deliberate deviations, and the differences in interface, architecture, and availability.",
-  author: { "@type": "Organization", name: "Maestro Studio", url: "https://maestroide.com" },
-  publisher: { "@type": "Organization", name: "Maestro Studio", url: "https://maestroide.com" },
-  mainEntityOfPage: "https://maestroide.com/compare/hermes-agent",
+  author: { "@type": "Organization", name: "Maestro Studio", url: "https://maestrostudio.dev" },
+  publisher: { "@type": "Organization", name: "Maestro Studio", url: "https://maestrostudio.dev" },
+  mainEntityOfPage: "https://maestrostudio.dev/compare/hermes-agent",
 };
 
 const ROWS: { dim: string; hermes: string; maestro: string }[] = [
-  { dim: "What it is", hermes: "A self-hosted autonomous agent that lives on your server — CLI and messaging first", maestro: "A desktop AI studio: visual orchestration IDE plus (Phase 2) an always-on agent service" },
+  { dim: "What it is", hermes: "A self-hosted autonomous agent that lives on your server — CLI and messaging first", maestro: "A desktop AI studio: visual orchestration canvas plus (Phase 2) an always-on agent service" },
   { dim: "Interface", hermes: "Terminal TUI, messaging platforms; Hermes Studio adds a web console", maestro: "Drag-and-drop workflow canvas, live agent map, dependency graphs — plus chat, CLI, and web console" },
   { dim: "Language / runtime", hermes: "Python (with a TypeScript console)", maestro: "Rust core with a typed IPC boundary; native installers for Windows, macOS, Linux" },
   { dim: "Model access", hermes: "Nous Portal, OpenRouter, custom OpenAI-compatible endpoints, local vLLM", maestro: "Unlimited registry across Anthropic, OpenAI-compatible, Gemini, Ollama, media providers, plus a generic HTTP adapter" },
@@ -122,7 +122,7 @@ export default function HermesComparePage() {
           <p style={{ color: "var(--faint)", fontSize: "0.85rem", marginTop: 18 }}>
             Hermes Agent and Hermes Studio are projects of Nous Research and EKKOLearnAI
             respectively; details reflect their public documentation as of mid-2026. Corrections
-            welcome at <a href="mailto:support@maestroide.com">support@maestroide.com</a>.
+            welcome at <a href="mailto:support@maestrostudio.dev">support@maestrostudio.dev</a>.
           </p>
 
           <div className="hero-cta" style={{ marginTop: 28 }}>

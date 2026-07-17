@@ -100,7 +100,7 @@ export async function addSupportMessage(msg: {
   message: string;
 }): Promise<SubscribeResult> {
   const p = getPool();
-  if (!p) return { ok: false, error: "The form isn't available right now — email support@maestroide.com instead." };
+  if (!p) return { ok: false, error: "The form isn't available right now — email support@maestrostudio.dev instead." };
   try {
     await ensureSchema(p);
     await p.query(
@@ -109,7 +109,7 @@ export async function addSupportMessage(msg: {
     );
     return { ok: true };
   } catch {
-    return { ok: false, error: "The form isn't available right now — email support@maestroide.com instead." };
+    return { ok: false, error: "The form isn't available right now — email support@maestrostudio.dev instead." };
   }
 }
 

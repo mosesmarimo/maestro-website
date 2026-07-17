@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Download Maestro Studio preview builds for Windows, macOS (Apple Silicon and Intel), and Linux. Free preview of the AI agent orchestration studio.",
   alternates: { canonical: "/download" },
-  keywords: ["download Maestro Studio", "AI agent IDE download", "agent orchestration desktop app", "Tauri AI IDE"],
+  keywords: ["download Maestro Studio", "AI agent studio download", "agent orchestration desktop app", "Tauri AI studio"],
 };
 
 const VERSION = "1.3.0";
@@ -61,9 +61,9 @@ const jsonLd = {
   applicationCategory: "DeveloperApplication",
   operatingSystem: "Windows, macOS, Linux",
   softwareVersion: VERSION,
-  downloadUrl: "https://maestroide.com/download",
+  downloadUrl: "https://maestrostudio.dev/download",
   offers: { "@type": "Offer", price: "0", priceCurrency: "USD", description: "Free preview build" },
-  url: "https://maestroide.com",
+  url: "https://maestrostudio.dev",
 };
 
 export default function DownloadPage() {

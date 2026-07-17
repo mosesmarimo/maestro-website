@@ -6,7 +6,7 @@ import JsonLd from "@/components/JsonLd";
 export const metadata: Metadata = {
   title: "Support",
   description:
-    "Get help with Maestro Studio: contact the support team through the form or email support@maestroide.com. Installation problems, bug reports, models and routing, MRGD questions.",
+    "Get help with Maestro Studio: contact the support team through the form or email support@maestrostudio.dev. Installation problems, bug reports, models and routing, MRGD questions.",
   alternates: { canonical: "/support" },
 };
 
@@ -14,12 +14,12 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Maestro Studio",
-  url: "https://maestroide.com",
+  url: "https://maestrostudio.dev",
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "customer support",
-    email: "support@maestroide.com",
-    url: "https://maestroide.com/support",
+    email: "support@maestrostudio.dev",
+    url: "https://maestrostudio.dev/support",
     availableLanguage: "English",
   },
 };
@@ -35,7 +35,7 @@ export default function SupportPage() {
           <p className="lede">
             Stuck on an install, found a bug, or unsure how to route something? Send a message —
             we reply to the email you provide. Prefer your own mail client? Write to{" "}
-            <a href="mailto:support@maestroide.com">support@maestroide.com</a>.
+            <a href="mailto:support@maestrostudio.dev">support@maestrostudio.dev</a>.
           </p>
         </div>
       </header>
@@ -52,7 +52,7 @@ export default function SupportPage() {
                 <li>For install issues, include your OS version and the installer you used — it halves the round-trips.</li>
               </ul>
               <div className="callout tip">
-                <strong>Email:</strong> <a href="mailto:support@maestroide.com">support@maestroide.com</a>
+                <strong>Email:</strong> <a href="mailto:support@maestrostudio.dev">support@maestrostudio.dev</a>
                 <br />
                 We usually reply within two business days.
               </div>

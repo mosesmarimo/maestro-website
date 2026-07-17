@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { GUIDES } from "@/lib/guides";
 import { getManualChapters } from "@/lib/manual";
 
-const BASE = "https://maestroide.com";
+const BASE = "https://maestrostudio.dev";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();

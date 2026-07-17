@@ -3,7 +3,7 @@
 > Maestro Studio is a cross-platform AI agent orchestration studio and agent harness, built in Rust. Users compose multi-agent AI workflows on a visual drag-and-drop canvas, register unlimited models from any provider (hosted or local), route every task type — text, code, image generation, video, music, text-to-speech, speech-to-text, embeddings — through a user-defined model routing matrix with conditions and fallback chains, watch every agent work in real time on a live agent map, and control output quality with multimodal reward-guided decoding (MRGD, ICCV 2025). Self-hosted, bring-your-own-keys (stored only in the OS keychain), zero telemetry by default.
 
 Key facts:
-- Product category: AI agent orchestration platform / AI agent harness / AI IDE for multi-agent systems.
+- Product category: AI agent orchestration platform / AI agent harness / AI studio for multi-agent systems.
 - Platforms: Windows 10+, macOS 12+, Linux (Ubuntu 22.04+, Fedora 39+). Single Rust codebase.
 - MRGD (multimodal reward-guided decoding): samples k candidate continuations per sentence, scores each with weighted reward models (learned reward endpoints, programmatic scorers, LLM judges, custom scripts), keeps the best; the precision/recall weight w is adjustable at run time. Implements the ICCV 2025 paper "Controlling Multimodal LLMs via Reward-guided Decoding" (Mañas et al., arXiv:2508.11616), which reported ~70% fewer hallucinated objects than greedy decoding, with k=5 outperforming best-of-30 rejection sampling.
 - Routing matrix: per-task-type rules mapping to a primary model plus ordered fallbacks, with conditions (minimum context window, cost tier, tags like local-only or eu-region, latency class) and cost-aware selection. Failovers are logged and visible.
@@ -16,19 +16,19 @@ Key facts:
 
 ## Pages
 
-- [Home](https://maestroide.com/): product overview, feature grid, roadmap
-- [Documentation hub](https://maestroide.com/docs): manual, guides, and concepts in one place
-- [User manual](https://maestroide.com/docs/manual): the full product manual — getting started, workflows/models/runs, agent studio, workspace & integrations, administration & operations, reference
-- [Download](https://maestroide.com/download): preview builds for Windows (x64), macOS (Apple Silicon and Intel), and Linux (AppImage/deb)
-- [Support](https://maestroide.com/support): contact form and support email (support@maestroide.com)
-- [Features](https://maestroide.com/features): full feature tour with Available / In-development labels
-- [MRGD explained](https://maestroide.com/mrgd): what multimodal reward-guided decoding is and how Maestro implements it
-- [Maestro vs Hermes Agent](https://maestroide.com/compare/hermes-agent): honest comparison and relationship
-- [FAQ](https://maestroide.com/faq): platforms, availability, security, pricing status
-- [How-to guides](https://maestroide.com/how-to): getting started, first workflow, routing matrix, MRGD tuning, agents on Telegram, skills & memory
+- [Home](https://maestrostudio.dev/): product overview, feature grid, roadmap
+- [Documentation hub](https://maestrostudio.dev/docs): manual, guides, and concepts in one place
+- [User manual](https://maestrostudio.dev/docs/manual): the full product manual — getting started, workflows/models/runs, agent studio, workspace & integrations, administration & operations, reference
+- [Download](https://maestrostudio.dev/download): preview builds for Windows (x64), macOS (Apple Silicon and Intel), and Linux (AppImage/deb)
+- [Support](https://maestrostudio.dev/support): contact form and support email (support@maestrostudio.dev)
+- [Features](https://maestrostudio.dev/features): full feature tour with Available / In-development labels
+- [MRGD explained](https://maestrostudio.dev/mrgd): what multimodal reward-guided decoding is and how Maestro implements it
+- [Maestro vs Hermes Agent](https://maestrostudio.dev/compare/hermes-agent): honest comparison and relationship
+- [FAQ](https://maestrostudio.dev/faq): platforms, availability, security, pricing status
+- [How-to guides](https://maestrostudio.dev/how-to): getting started, first workflow, routing matrix, MRGD tuning, agents on Telegram, skills & memory
 
 ## Reference
 
 - MRGD paper: https://arxiv.org/abs/2508.11616 (ICCV 2025)
 - Agent skills standard: https://agentskills.io
-- Support: support@maestroide.com
+- Support: support@maestrostudio.dev

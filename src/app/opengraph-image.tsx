@@ -45,7 +45,7 @@ export default function OpengraphImage() {
           Visual multi-agent workflows · model routing matrix · live agent map · multimodal
           reward-guided decoding (MRGD)
         </div>
-        <div style={{ fontSize: 22, color: "#3EAF86", marginTop: 40 }}>maestroide.com</div>
+        <div style={{ fontSize: 22, color: "#3EAF86", marginTop: 40 }}>maestrostudio.dev</div>
       </div>
     ),
     { ...size },

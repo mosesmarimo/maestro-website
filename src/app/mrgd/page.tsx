@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     title: "Multimodal Reward-Guided Decoding (MRGD), explained",
     description:
       "Sample k candidate continuations every sentence, score each with weighted reward models, keep the best. The ICCV 2025 technique behind Maestro Studio's quality dial — explained plainly.",
-    url: "https://maestroide.com/mrgd",
+    url: "https://maestrostudio.dev/mrgd",
   },
 };
 
@@ -36,9 +36,9 @@ const jsonLd = {
       headline: "Multimodal Reward-Guided Decoding (MRGD), explained",
       description:
         "A plain-language explainer of multimodal reward-guided decoding (MRGD): sampling k candidate continuations per sentence, scoring them with weighted reward models, and keeping the best — with results from the ICCV 2025 paper and how Maestro Studio implements it.",
-      author: { "@type": "Organization", name: "Maestro Studio", url: "https://maestroide.com" },
-      publisher: { "@type": "Organization", name: "Maestro Studio", url: "https://maestroide.com" },
-      mainEntityOfPage: "https://maestroide.com/mrgd",
+      author: { "@type": "Organization", name: "Maestro Studio", url: "https://maestrostudio.dev" },
+      publisher: { "@type": "Organization", name: "Maestro Studio", url: "https://maestrostudio.dev" },
+      mainEntityOfPage: "https://maestrostudio.dev/mrgd",
       citation: {
         "@type": "ScholarlyArticle",
         name: "Controlling Multimodal LLMs via Reward-guided Decoding",
@@ -51,7 +51,7 @@ const jsonLd = {
       name: "Multimodal Reward-Guided Decoding (MRGD)",
       description:
         "An inference-time technique for controlling multimodal large language models: at each step the model samples k candidate continuations, each candidate is scored by a weighted combination of reward models conditioned on the multimodal input (for example an image), and the highest-scoring candidate is kept. The weighting is adjustable at run time, trading precision against recall without retraining the base model.",
-      url: "https://maestroide.com/mrgd",
+      url: "https://maestrostudio.dev/mrgd",
     },
   ],
 };

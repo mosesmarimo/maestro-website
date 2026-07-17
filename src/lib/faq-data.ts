@@ -11,7 +11,7 @@ export const FAQ_SEED: FaqEntry[] = [
   {
     question: "What is an AI agent harness — and is Maestro one?",
     answerHtml:
-      "<p>An <strong>AI agent harness</strong> is the scaffolding around a language model that turns it into a working agent: the loop that feeds it tools, executes its tool calls, manages context and memory, enforces budgets and permissions, and records what happened. Frameworks give you this as a library; Maestro gives it to you as an instrument — the harness is visual (the canvas and live agent map), the guardrails are first-class (budgets, approvals, sandbox policies), and every run is a replayable event log. So yes: Maestro is an agent harness, an <strong>AI agent orchestration platform</strong> on top of it, and an IDE around both.</p>",
+      "<p>An <strong>AI agent harness</strong> is the scaffolding around a language model that turns it into a working agent: the loop that feeds it tools, executes its tool calls, manages context and memory, enforces budgets and permissions, and records what happened. Frameworks give you this as a library; Maestro gives it to you as an instrument — the harness is visual (the canvas and live agent map), the guardrails are first-class (budgets, approvals, sandbox policies), and every run is a replayable event log. So yes: Maestro is an agent harness, an <strong>AI agent orchestration platform</strong> on top of it, and a studio around both.</p>",
   },
   {
     question: "What is AI agent orchestration?",
@@ -86,7 +86,7 @@ export const FAQ_SEED: FaqEntry[] = [
   {
     question: "What's the difference between Phase 1 and Phase 2?",
     answerHtml:
-      "<p>Phase 1 is the orchestration IDE: canvas, models, routing, orchestrator, live map, MRGD, media routing, observability. Phase 2 is the agent-platform layer: persistent memory, self-authored skills, the messaging gateway, schedules with a headless service, sandboxed execution backends, browser tools, multi-agent rooms, profiles and a web console, trajectory export, and MCP. Both phases are fully specified; Phase 2 stages begin after Phase 1 reaches GA.</p>",
+      "<p>Phase 1 is the orchestration studio: canvas, models, routing, orchestrator, live map, MRGD, media routing, observability. Phase 2 is the agent-platform layer: persistent memory, self-authored skills, the messaging gateway, schedules with a headless service, sandboxed execution backends, browser tools, multi-agent rooms, profiles and a web console, trajectory export, and MCP. Both phases are fully specified; Phase 2 stages begin after Phase 1 reaches GA.</p>",
   },
   {
     question: "How does Maestro compare to workflow tools and agent frameworks?",
